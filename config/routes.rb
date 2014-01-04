@@ -1,7 +1,9 @@
 TSC2013::Application.routes.draw do
 
-
+ 
+  get "admin/verRamo"
 #ALUMNO
+
   get "alumno/index"
 
 #PROFESORES  
@@ -10,6 +12,7 @@ TSC2013::Application.routes.draw do
 
 #ADMINISTRACION  
   get "admin/index"
+	 get "admin/profe_new" => "admin#profe_new"
 
 #AUTHENTIFICATION
   get "auth/login"
