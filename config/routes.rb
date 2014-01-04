@@ -1,7 +1,8 @@
 TSC2013::Application.routes.draw do
 
- 
+  root :to "auth#login"
   get "admin/verRamo"
+
 #ALUMNO
 
   get "alumno/index"
@@ -12,7 +13,8 @@ TSC2013::Application.routes.draw do
 
 #ADMINISTRACION  
   get "admin/index"
-	 get "admin/profe_new" => "admin#profe_new"
+	get "admin/profe_new" => "admin#profe_new"
+  post "admin/profe_new" => "admin#crear"
 
 #AUTHENTIFICATION
   get "auth/login"
@@ -24,8 +26,7 @@ TSC2013::Application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
-  # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
