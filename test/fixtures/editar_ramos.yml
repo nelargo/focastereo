@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  sigla: MyString
+  nombre: MyString
+  cant_ayudantes: 1
+  tipo_ayudante: MyString
+  criterio: MyString
+
+two:
+  sigla: MyString
+  nombre: MyString
+  cant_ayudantes: 1
+  tipo_ayudante: MyString
+  criterio: MyString

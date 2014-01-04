@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  sigla: MyString
+  nom_asignatura: MyString
+  campus: MyString
+  profesor: MyString
+  departamento: MyString
+
+two:
+  sigla: MyString
+  nom_asignatura: MyString
+  campus: MyString
+  profesor: MyString
+  departamento: MyString
