@@ -1,5 +1,6 @@
 class AuthController < ApplicationController
   def login
+	@al = Db_alumno.all
   end
 
   def intento_login

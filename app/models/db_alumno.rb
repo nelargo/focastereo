@@ -1,5 +1,5 @@
-class DbAlumno < ActiveRecord::Base
-	establish_connection "db_alumno_#{Rails.env}"
+class Db_alumno < ActiveRecord::Base
+	establish_connection "db_alumno_production"
 	self.table_name = "datos_alumnos"
 	
 	def encrypt_password
