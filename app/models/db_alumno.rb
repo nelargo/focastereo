@@ -17,7 +17,7 @@ class Db_alumno < ActiveRecord::Base
   		passwd == Digest::SHA1.hexdigest(login_password)
 	end
 	def self.authenticate(username="", login_password="")
-    	user = Dbalumno.find_by_login(username)
+    	user = Db_alumno.find_by_login(username)
 	  	if user && user.match_password(login_password)
 	    	return user
 	  	else
