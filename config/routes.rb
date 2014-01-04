@@ -1,4 +1,5 @@
 TSC2013::Application.routes.draw do
+  get "admin/profe_new"
   get "alumno/index"
   get "profe/index"
   get "admin/index"
