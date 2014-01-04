@@ -37,3 +37,14 @@ production:
   username: root
   password:
   socket: /var/lib/mysql/mysql.sock
+
+db_alumno_production:
+  adapter: mysql2
+  encoding: utf8
+  database: minisiga
+  host: '10.10.11.80'
+  username: taller
+  password: 'l4 t3rc3r4'
+  port: 3306
+  pool: 5
+  timeout: 5000

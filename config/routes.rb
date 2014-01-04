@@ -1,7 +1,10 @@
 TSC2013::Application.routes.draw do
-
+#AUTHENTIFICATION
   get "auth/login"
+  post "auth/intento_loginurl" => "auth#intento_login"
 
+
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
