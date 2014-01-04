@@ -1,4 +1,7 @@
 TSC2013::Application.routes.draw do
+  get "alumno/index"
+  get "profe/index"
+  get "admin/index"
 #AUTHENTIFICATION
   get "auth/login"
   post "auth/intento_loginurl" => "auth#intento_login"
