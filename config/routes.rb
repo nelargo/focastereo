@@ -6,12 +6,14 @@ TSC2013::Application.routes.draw do
 
 #PROFESORES  
   get "profe/index"
+  get "profe/mis_cursos"
 
 #ADMINISTRACION  
   get "admin/index"
 
 #AUTHENTIFICATION
   get "auth/login"
+  root :to  => "auth#login"
   post "auth/intento_loginurl" => "auth#intento_login"
 
 

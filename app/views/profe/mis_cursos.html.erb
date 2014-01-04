@@ -1,0 +1,34 @@
+  	<table class="table table-striped">
+	<thead>
+		<tr>
+		<th>Sigla</th>
+		<th>Nombre Curso</th>
+		<th>Cantidad de ayudantes</th>
+		<th>Tipo ayudante</th>
+		<th>Campus</th>
+		<th>Departamento</th>
+		<th>Area</th>
+		<th>Creditos</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @ramos.each do |ramo| %>
+			<% if ramo.profesor == @profesor.nombre %>
+				<% if ramo.activo %>
+					<tr>
+  						<td><%= ramo.sigla %></td>
+  						<td><%= ramo.nombre %></td>
+  						<td><%= ramo.cant_ayudantes %></td>
+  						<td><%= ramo.tipo_ayudante %></td>
+  						<td><%= ramo.campus %></td>
+  						<td><%= ramo.departamento %></td>
+  						<td><%= ramo.area %></td>
+  						<td><%= ramo.creditos %></td>
+  						<td><%= link_to "editar", editar_ramo_path(ramo.id) %></td>
+  						<td><%= link_to "ver postulantes", ver_postulantes_path(ramo.id) %></td>
+  					</tr>
+  				<% end %>
+  			<% end %>
+  		<% end %>
+  	</tbody>
+  	</table>

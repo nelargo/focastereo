@@ -1,2 +1,32 @@
-<h1>Profe#index</h1>
-<p>Find me in app/views/profe/index.html.erb</p>
+<h1>Index para los profesores</h1>
+
+<table class="table table-bordered">
+			<h3><span class="label label-info">Datos personales</span></h3>
+			<tbody>
+				<tr>
+				<td class="success">Nombre:</td>
+				<td><%= @profesor.nombre %></td>
+				<td class="success">Rol:</td>
+				<td><%= @profesor.rol %></td>				
+				</tr>
+				<tr>
+				<td class="success">Mail:</td>
+				<td><%= @profesor.mail %></td>
+				<td class="success">Departamento:</td>
+				<td><%= @profesor.departamento %></td>						
+				</tr>
+				<td class="success">Oficina:</td>
+				<td><%= @profesor.oficina %></td>						
+				</tr>
+			</tbody>
+		</table>
+<br />
+<br />
+<br />
+
+
+
+<a href="mis_cursos.html.erb">MIs cursos</a>
+
+
+
