@@ -4,6 +4,7 @@ TSC2013::Application.routes.draw do
 =======
 
 
+  get "admin/verRamo"
 #ALUMNO
 >>>>>>> 6c362eeea5e0229b24f63653a93ca1063b006856
   get "alumno/index"
