@@ -1,8 +1,19 @@
 TSC2013::Application.routes.draw do
+<<<<<<< HEAD
   get "admin/profe_new"
+=======
+
+
+#ALUMNO
+>>>>>>> 6c362eeea5e0229b24f63653a93ca1063b006856
   get "alumno/index"
+
+#PROFESORES  
   get "profe/index"
+
+#ADMINISTRACION  
   get "admin/index"
+
 #AUTHENTIFICATION
   get "auth/login"
   post "auth/intento_loginurl" => "auth#intento_login"
