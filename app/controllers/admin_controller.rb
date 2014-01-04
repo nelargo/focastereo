@@ -2,7 +2,7 @@ class AdminController < ApplicationController
   def index
   end
 
-  def verCursos
-    @ramos = Ramos.all
+  def verRamos
+    @ramos = Ramo.all
   end
 end
