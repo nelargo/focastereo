@@ -34,7 +34,7 @@ class AuthController < ApplicationController
 
 	      	flash[:notice] = "Usuario o contrasena Invalida"
 	      	flash[:color]= "invalid"
-	     	redirect_to :action => "index"
+	     	redirect_to :action => "login"
 	     	return
 
 	    end
