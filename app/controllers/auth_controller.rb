@@ -4,9 +4,9 @@ class AuthController < ApplicationController
   end
 
   def intento_login
-  	authorized_user = Administrator.authenticate(params[:username_or_email],params[:login_password])
+  	authorized_user = Administrador.authenticate(params[:user],params[:pass])
 	    if authorized_user
-	    	session[:user_id] = authorized_user.id
+	    	session[:id_usuario] = authorized_user.id
 	    	session[:user_name] = authorized_user.usuario
 	    	session[:type] = "administrator"
 	     	flash[:notice] = "Bienvenido, Usted esta loggeado como #{authorized_user.usuario}"
@@ -14,17 +14,17 @@ class AuthController < ApplicationController
 	      	return
 	      	
 	    else
-	    	authorized_user = Dbalumno.authenticate(params[:username_or_email],params[:login_password])
+	    	authorized_user = Db_alumno.authenticate(params[:user],params[:pass])
 	    	if authorized_user
-	    		session[:user_id] = authorized_user.rol
+	    		session[:id_usuario] = authorized_user.rol
 		    	session[:type] = "alumno"
 		     	flash[:notice] = "Bienvenido, Usted esta loggeado como #{authorized_user.rol}"
 		      	redirect_to(:controller => 'alumno', :action => 'index')
 		      	return
 	    	else
-	    		authorized_user = Professor.authenticate(params[:username_or_email],params[:login_password])
+	    		authorized_user = Profesor.authenticate(params[:user],params[:pass])
 		    	if authorized_user
-		    		session[:user_id] = authorized_user.rol
+		    		session[:id_usuario] = authorized_user.rol
 			    	session[:type] = "profesor"
 			     	flash[:notice] = "Bienvenido, Usted esta loggeado como #{authorized_user.rol}"
 			      	redirect_to(:controller => 'profesor', :action => 'index')
