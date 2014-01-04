@@ -1,8 +1,7 @@
 TSC2013::Application.routes.draw do
-<<<<<<< HEAD
+
   get "auth/login"
-=======
->>>>>>> a059f8e40e6796bf8139928db872c8d8da48bfbe
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
