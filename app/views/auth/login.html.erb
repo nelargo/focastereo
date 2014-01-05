@@ -1,3 +1,33 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title> Sistema de Postulación a Ayudantías</title>
+<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet" />
+<link href="default.css" rel="stylesheet" type="text/css" media="all" />
+</head>
+
+<body>
+
+<div id="header-wrapper">
+  <div id="header" class="container">
+    <div id="logo">
+      <span class="icon icon-group"></span>
+      <h1><a href="#">>Sistema de Postulación a Ayudantías<</a></h1>
+    </div>
+    <div id="triangle-up"></div>
+  </div>
+</div>
+
+<div id="wrapper">
+  <div id="featured-wrapper">
+    <div class="extra2 container">
+      <div class="ebox1">
+        <div class="title">
+          <h2>Bienvenido al Sistema de Postulación a Ayudantías</h2>
+          <p>Universidad Técnica Federico Santa María, Departamento de Informática</p>
+        </div>
+</div>    
+
 
 			<%= form_tag({:controller => "auth", :action => 'intento_login'}) do %>
 			<h3><span class="label label-info">Login</span></h3>
@@ -11,4 +41,12 @@
 		  		<%= password_field_tag :pass, nil, :class => "form-control" %></p> 
 			</div><br>
 			    <%= submit_tag "Entrar" , :class =>"btn btn-primary"  %>
-  			<% end %>			
+  			<% end %>	
+
+</body>
+</html>
+
+
+
+
+
