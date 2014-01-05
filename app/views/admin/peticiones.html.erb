@@ -1,10 +1,11 @@
 <table>
 <tr><td>Sigla - Nombre</td><td>Profesor</td><td></td>
 <% @p.each do |pet| %>
+
 <% ramo = Ramo.find_by_id(pet.id_ramo) %>
-<tr><td><% ramo.sigla %>- <% ramo.nombre %></td>
-		<td><% ramo.profesor %></td>
-		<td><%link_to ver_peticion_path(pet.id) %></td>
+<tr><td><%= ramo.sigla %> - <%= ramo.nombre %></td>
+		<td><%= ramo.profesor %></td>
+		<td><%link_to "Ver", ver_peticion_path(pet.id) %></td>
 </tr>
 <% end %>
 
