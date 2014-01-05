@@ -22,7 +22,7 @@ class AdminController < ApplicationController
 
 
   def crear
-  	@profe = Profesor.new(params[:professor])
+  	@profe = Profesor.new(params[:profesor])
     if @profe.save
       flash[:notice] = "Registro Exitoso"
       flash[:color] = "valid"
