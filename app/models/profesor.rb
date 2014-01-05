@@ -23,6 +23,7 @@ class Profesor < ActiveRecord::Base
 	def clear_password
   		self.password = nil
 	end
+  
   def match_password(login_password="")
     require 'digest/sha1'
       password == Digest::SHA1.hexdigest(login_password)

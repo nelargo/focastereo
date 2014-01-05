@@ -3,6 +3,7 @@ class AdminController < ApplicationController
 	before_filter :checkAdmin
 	
   def index
+    @flag = "NADA"
   end
 
   def profe_new
@@ -26,6 +27,7 @@ class AdminController < ApplicationController
     if @profe.save
       flash[:notice] = "Registro Exitoso"
       flash[:color] = "valid"
+      @flag = "Profe Agregado"
     else
       flash[:notice] = "Registro fallido"
       flash[:color] = "invalid"
