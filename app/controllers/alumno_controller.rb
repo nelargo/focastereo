@@ -4,6 +4,7 @@ class AlumnoController < ApplicationController
   def index
   	@user = session[:username]
   	@etapa = Etapa.all
+  	@postulaciones = Postular.find_by_id_alumno(session[:id])
   end
 
   def checkAlumno
@@ -14,11 +15,12 @@ class AlumnoController < ApplicationController
   		return
   end
 
-  def postulacion
+  def postular
   	@ramos = Ramo.find_by_activo(1)
   end
 
-  def postular
+  def crear
+  	
   end
 
   def eliminar

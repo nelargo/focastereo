@@ -1,2 +1,22 @@
-<h1>Alumno#postular</h1>
-<p>Find me in app/views/alumno/postular.html.erb</p>
+<h1> RAMOS </h1>
+<table>
+	<tr><td>Sigla</td>
+			<td>Nombre</td>
+			<td>Tipo</td>
+			<td></td>
+	</tr>
+	<%= @ramos.each fo |r| %>
+		<tr><td><%= r.sigla %></td>
+				<td><%= r.nombre %></td>
+				<%  dummy = "|"
+					if r.tipo_ayudante_cat
+						dummy += "cat|"
+      		if r.tipo_ayudante_lab
+      			dummy += "lab|"
+      		if tipo_ayudante_cor
+      			dummy += "cor|" %>
+      	<td><%= dummy %></td>
+				<td></td>
+		<tr>
+	<% end %>
+</table>
