@@ -8,11 +8,16 @@ TSC2013::Application.routes.draw do
 
 #PROFESORES  
   get "profe/index"
-  get "profe/mis_cursos"
+  get "profe/mis_cursos/" => "profe#mis_cursos"
+  get "profesor/editarRamo/:id" => "profesor#editarRamo", :as => 'editar_ramo'
+  post "profesor/editarRamo/id" => "profesor#procesarEditarRamo"
+  get "profesor/verPostulantes/:id" => "profesor#verPostulantes", :as => 'ver_postulantes'
+  get "profesor/rechazar/:idPostulacion/:idCurso" => "profesor#rechazar", :as => 'rechazar'
+  get "profesor/aceptar/:idPostulacion/:idCurso" => "profesor#aceptar", :as => 'aceptar'
 
 #ADMINISTRACION  
   get "admin/index"
-	 get "admin/profe_new" => "admin#profe_new"
+	get "admin/profe_new" => "admin#profe_new"
 
 #AUTHENTIFICATION
   get "auth/login"
