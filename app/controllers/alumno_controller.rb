@@ -2,7 +2,7 @@ class AlumnoController < ApplicationController
   before_filter :checkAlumno
 
   def index
-  	@user = session[:username]
+  	@user = Db_alumno.find_by_rol(session[:id_usuario])
   	@etapa = Etapa.all
   	@postulaciones = Postular.find_by_id_alumno(session[:id])
   end
@@ -17,7 +17,7 @@ class AlumnoController < ApplicationController
   end
 
   def postular
-  	@ramos = Ramo.find_by_activo(1)
+  	@ramos = Ramo.all
   end
 
   def crear  	
