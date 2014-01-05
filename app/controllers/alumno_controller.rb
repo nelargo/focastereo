@@ -1,5 +1,5 @@
 class AlumnoController < ApplicationController
-  befor_filter :checkAlumno
+  before_filter :checkAlumno
 
   def index
   	@user = session[:username]
