@@ -13,19 +13,17 @@ class AlumnoController < ApplicationController
   		return
   	else
   		return
+  	end
   end
 
   def postular
   	@ramos = Ramo.find_by_activo(1)
   end
 
-  def crear
-  	
+  def crear  	
   end
 
   def eliminar
   end
-
-
-  
+ 
 end
