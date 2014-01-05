@@ -25,6 +25,7 @@ TSC2013::Application.routes.draw do
   post "admin/profe_new"      => "admin#crear"
   get "admin/ramo_new"        => "admin#ramo_new"
   post "admin/ramo_new"       => "admin#crear_ramo"
+  get "admin/peticiones"      => "admin#peticiones"
 
 #AUTHENTIFICATION
   get "auth/login"

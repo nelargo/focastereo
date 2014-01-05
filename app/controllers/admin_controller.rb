@@ -60,6 +60,20 @@ class AdminController < ApplicationController
     end
   end
 
+  def peticiones
+    @p = Editar_ramo.all
+  end
+
+  def ver_peticion
+    @original = Ramo.find_by_id(params[:ido])
+    @modif = Editar_ramo.find_by_id(params[:idp])
+  end
+
+  def aceptar_peticion
+  end
+
+  def rechazar_peticion
+
 private
   def profe_params
     params.require(:profesor).permit(:nombre, :rol, :password, :departamento, :mail, :oficina)
