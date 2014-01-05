@@ -1,6 +1,6 @@
 TSC2013::Application.routes.draw do
 
-  
+  get "/logout" => "application#logout", :as => "logout"  
 #ALUMNO
 
   get "alumno/index"
