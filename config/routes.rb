@@ -19,8 +19,8 @@ TSC2013::Application.routes.draw do
   get "admin/index"
   get "admin/ramo_new"
   get "admin/verRamo"         => "admin#verRamo"
-  get "admin/editarRamo/:id"  => "admin#editarRamo", :as => 'editar_ramo_admin'
-  post "admin/editarRamo/id"  => "admin#editar"
+  get "admin/editarRamo/:id"  => "admin#editarRamo", :as => 'editar_ramo_admin' 
+  post "admin/editarRamo/:id"  => "admin#editar"
   get "admin/profe_new"       => "admin#profe_new"
   post "admin/profe_new"      => "admin#crear"
   get "admin/ramo_new"        => "admin#ramo_new"
