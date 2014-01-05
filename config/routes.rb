@@ -12,7 +12,7 @@ TSC2013::Application.routes.draw do
   get "profe/mis_cursos/" => "profe#mis_cursos"
   get "profe/editarRamo/:id" => "prof#editarRamo", :as => 'editar_ramo'
   post "profe/editarRamo/id" => "profesor#procesarEditarRamo"
-  get "profe/postulaciones/:id" => "profe#", :as => 'ver_postulantes'
+  get "profe/postulaciones/:id" => "profe#", :as => 'postulaciones'
   get "profe/rechazar/:idPostulacion/:idCurso" => "profe#rechazar", :as => 'rechazar'
   get "profe/aceptar/:idPostulacion/:idCurso" => "profe#aceptar", :as => 'aceptar'
 

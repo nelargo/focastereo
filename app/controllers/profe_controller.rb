@@ -57,28 +57,28 @@ private
     @etapa = Stage.find(1)
   end
   def aceptar
-    postulacion = Application.find(params[:idPostulacion])
-    curso = Course.find(postulacion.id_curso)
-    profesor = Professor.find_by_rol(session[:id_usuario])
-    if curso.profesor != profesor.nombre
+    postulacion = Postular.find(params[:idPostulacion])
+    ramo = Ramo.find(postulacion.id_curso)
+    prof = Profesor.find_by_rol(session[:id_usuario])
+    if curso.profesor != prof.nombre
       redirect_to root_path
       return
     end
-    postulacion.status_postulacion = "aceptada"
+    postulacion.status = "aceptada"
     postulacion.save
-    redirect_to ver_postulantes_path(params[:idCurso])
+    redirect_to postulaciones_path(params[:idCurso])
   end
   def rechazar
-    postulacion = Application.find(params[:idPostulacion])
-    curso = Course.find(postulacion.id_curso)
-    profesor = Professor.find_by_rol(session[:id_usuario])
+    postulacion = Postular.find(params[:idPostulacion])
+    ramo = Ramo.find(postulacion.id_curso)
+    prof = Profesor.find_by_rol(session[:id_usuario])
     if curso.profesor != profesor.nombre
       redirect_to root_path
       return
     end
-    postulacion.status_postulacion = "rechazada"
+    postulacion.status = "rechazada"
     postulacion.save
-    redirect_to ver_postulantes_path(params[:idCurso])
+    redirect_to postulaciones_path(params[:idCurso])
   end
 
 end
