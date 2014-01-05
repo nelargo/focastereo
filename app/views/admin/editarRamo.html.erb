@@ -1,6 +1,6 @@
 <h1> Editar Ramo: </h1>
 
-<%= form_for(:ramo, :url => editar_ramo_admin(@ramo.id)) do |f| %>
+<%= form_for(:ramo, :url => editar_ramo_admin_path(@ramo.id)) do |f| %>
 <label>Sigla</label>
 <%= f.text_field :sigla, :value => @ramo.sigla %></p>
 
