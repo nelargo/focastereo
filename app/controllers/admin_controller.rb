@@ -36,7 +36,7 @@ class AdminController < ApplicationController
       end
   end
 
-  def verRamos
+  def verRamo
     @ramos = Ramo.all
   end
 
