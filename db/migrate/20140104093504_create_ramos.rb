@@ -5,7 +5,9 @@ class CreateRamos < ActiveRecord::Migration
       t.string :nombre
       t.string :profesor
       t.integer :num_ayudantes
-      t.string :tipo_ayudante
+      t.bool :tipo_ayudante_cat
+      t.bool :tipo_ayudante_lab
+      t.bool :tipo_ayudante_cor
       t.string :campus
       t.string :departamento
       t.string :area

@@ -28,38 +28,27 @@ private
     end
   end  
   def procesarEditarAsignatura
-    curso = Course.find_by_sigla(params[:course_modification][:sigla])
-    profesor = Professor.find_by_rol(session[:id_usuario])
-    if curso.profesor != profesor.nombre
+    profe = Profesor.find_by_rol(session[:id_usuario])
+    ramo = Ramo.find(params[:editar_ramos][:id_curso])
+    if ramo.profesor != profesor.nombre
       redirect_to root_path
       return
     end
-    @changeTicket = CourseModification.new(params[:course_modification])
-    @tipo_ayudante = ""
-    if params[:catedra] == "1"
-      @tipo_ayudante = "catedra "
-    end
-    if params[:laboratorio] == "1"
-      @tipo_ayudante = @tipo_ayudante + "laboratorio "
-    end
-    if params[:correccion] == "1"
-      @tipo_ayudante = @tipo_ayudante + "correccion"
-    end
-    @changeTicket.tipo_ayudante = @tipo_ayudante
-    @changeTicket.listo = false
-    @changeTicket.save
-    require 'mail'
-    sujeto = params[:mailSubject]
-    cuerpo = params[:mailBody]
-    administradores = Administrator.all
-    administradores.each do |administrador|
-      Mail.deliver do
-        to administrador.mail
-        from 'OutBlackSupport@outblack.com'
-        subject sujeto
-        body cuerpo
-      end
-    end
+    solicitud_de_cambio = Editar_ramos.new(params[:editar_ramos])
+    solicitud_de_cambio.save
+    #@mail = 
+    #require 'mail'
+    #sujeto = params[:mailSubject]
+    #cuerpo = params[:mailBody]
+    #administradores = Administrator.all
+    #administradores.each do |administrador|
+    #  Mail.deliver do
+    #    to administrador.mail
+    #    from 'OutBlackSupport@outblack.com'
+    #    subject sujeto
+    #    body cuerpo
+    #  end
+    #end
     redirect_to action: "asignaturas"
   end
   def verPostulantes
