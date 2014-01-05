@@ -1,0 +1,42 @@
+
+	  	<table class="table table-striped">
+		<thead>
+			<tr>
+			<th>Rol</th>
+			<th>Nombre</th>
+			<th>Prioridad Académica</th>
+			<th>Nivel Ayudante</th>
+			<th>Prioridad</th>
+			<th>Tipo</th>
+			<th>Status postulación</th>
+			<th>Acciones</th>
+			</tr>
+		</thead>
+		<tbody>
+			<% @postulaciones.each do |postula| %>
+			<% alumno = Db_alumno.find_by_rol(postula.id_alumno) %>
+	            <tr>
+	            	<td><%= alumno.rol %></td>
+	            	<td><%= alumno.nombre %></td>
+	            	<td><%= alumno.prioridad %></td>
+	            	<td><%= alumno.categoria %></td>
+	            	<td><%= postula.prioridad %></td>
+	  				<td><%= postula.tipo_postulacion %></td>
+	  				<td><%= postula.status %></td>	  				
+	  				<td>
+	  					<% if @etapa.activa == 4 %><!-- aqui tiene que estar en la etapa correcta -->
+	  						<%= link_to image_tag("aceptar.png"), aceptar_path(postula.id,params[:id]), :confirm => '¿Está seguro?' %>
+								<%= link_to image_tag("rechazar.png"), rechazar_path(postula.id,params[:id]), :confirm => '¿Está seguro?'%>
+	  					<% else %>
+	  						No hay acciones disponibles
+	  					<% end %>
+	  				</td>
+	  			</tr>
+	  		<% end %>
+		</tbody>
+	  	</table>
+		</div>
+	</div>
+</div>
+
+ 

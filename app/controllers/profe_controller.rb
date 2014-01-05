@@ -51,8 +51,8 @@ private
     #end
     redirect_to action: "asignaturas"
   end
-  def verPostulantes
-    @postulaciones = Application.where(id_curso: params[:id])
+  def postulaciones
+    @postulaciones = Postular.where(id_curso: params[:id])
     #@postulaciones = Application.where(id_curso: params[:id], status_postulacion: "pendiente")
     @etapa = Stage.find(1)
   end

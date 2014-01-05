@@ -7,6 +7,7 @@ class CreatePostulars < ActiveRecord::Migration
       t.integer :prioridad
       t.integer :prioridad_alumno
       t.integer :num_veces_ayu
+      t.string :status
 
       t.timestamps
     end
