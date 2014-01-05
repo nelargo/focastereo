@@ -27,7 +27,7 @@ class AuthController < ApplicationController
 		    		session[:id_usuario] = authorized_user.rol
 			    	session[:type] = "profesor"
 			     	flash[:notice] = "Bienvenido, Usted esta loggeado como #{authorized_user.rol}"
-			      	redirect_to(:controller => 'profesor', :action => 'index')
+			      	redirect_to(:controller => 'profe', :action => 'index')
 			      	return
 			      end
 	    	end

@@ -1,7 +1,7 @@
 class ProfeController < ApplicationController
 	before_filter :esProfe
 
-private
+
   def esProfe
     if session[:type] != "profesor"
       redirect_to root_path
