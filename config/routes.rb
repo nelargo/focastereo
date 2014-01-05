@@ -1,6 +1,7 @@
 TSC2013::Application.routes.draw do
 
  
+  get "alumno/postular"
   get "admin/ramo_new"
   get "admin/verRamo"
 #ALUMNO
