@@ -27,10 +27,13 @@ ActiveRecord::Schema.define(version: 20140104094656) do
   end
 
   create_table "editar_ramos", force: true do |t|
+    t.integer  "id_ramo"
     t.string   "sigla"
     t.string   "nombre"
     t.integer  "cant_ayudantes"
-    t.string   "tipo_ayudante"
+    t.boolean  "tipo_ayudante_cat"
+    t.boolean  "tipo_ayudante_lab"
+    t.boolean  "tipo_ayudante_cor"
     t.string   "criterio"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -59,6 +62,7 @@ ActiveRecord::Schema.define(version: 20140104094656) do
     t.integer  "prioridad"
     t.integer  "prioridad_alumno"
     t.integer  "num_veces_ayu"
+    t.string   "status"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -79,7 +83,9 @@ ActiveRecord::Schema.define(version: 20140104094656) do
     t.string   "nombre"
     t.string   "profesor"
     t.integer  "num_ayudantes"
-    t.string   "tipo_ayudante"
+    t.boolean  "tipo_ayudante_cat"
+    t.boolean  "tipo_ayudante_lab"
+    t.boolean  "tipo_ayudante_cor"
     t.string   "campus"
     t.string   "departamento"
     t.string   "area"

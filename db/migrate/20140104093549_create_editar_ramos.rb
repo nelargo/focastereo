@@ -5,9 +5,9 @@ class CreateEditarRamos < ActiveRecord::Migration
       t.string :sigla
       t.string :nombre
       t.integer :cant_ayudantes
-      t.bool :tipo_ayudante_cat
-      t.bool :tipo_ayudante_lab
-      t.bool :tipo_ayudante_cor
+      t.boolean :tipo_ayudante_cat
+      t.boolean :tipo_ayudante_lab
+      t.boolean :tipo_ayudante_cor
       t.string :criterio
 
       t.timestamps

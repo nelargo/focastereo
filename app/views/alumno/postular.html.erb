@@ -5,21 +5,11 @@
 			<td>Tipo</td>
 			<td></td>
 	</tr>
-	<%= @ramos.each fo |r| %>
+	<% @ramos.each do |r| %>
 		<tr><td><%= r.sigla %></td>
 				<td><%= r.nombre %></td>
-				<%  dummy = "|"
-					if r.tipo_ayudante_cat
-						dummy += "cat|"
-					end
-      		if r.tipo_ayudante_lab
-      			dummy += "lab|"
-      		end
-      		if tipo_ayudante_cor
-      			dummy += "cor|" 
-      		end %>
 
-      	<td><%= dummy %></td>
+      				<td></td>
 				<td></td>
 		<tr>
 	<% end %>
