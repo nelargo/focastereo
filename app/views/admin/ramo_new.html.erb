@@ -1,0 +1,41 @@
+<h1>Admin#ramo_new</h1>
+<p>Find me in app/views/admin/ramo_new.html.erb</p>
+
+
+<%= form_for(:ramo_new, :url => "/admin/ramo_new")  do |f| %>
+
+<label>Nombre</label>
+<%= f.text_field(:nombre) %></p>
+
+<label>Sigla</label>
+<%= f.text_field(:sigla) %></p>
+
+<label>Profesor</label>
+<%= f.text_field(:profesor) %></p>
+
+<label>Número de ayudantes</label>
+<%= f.text_field(:num_ayudantes) %></p>
+
+<br>
+<label>Tipo de ayundates</label>
+catedra <%= f.check_box :tipo_ayudante_cat %>
+laboratorio <%= f.check_box :tipo_ayudante_lab %>
+correccion <%= f.check_box :tipo_ayudante_cor %>
+<br>
+
+<label>Campus</label>
+<%= f.text_field(:campus) %></p>
+
+<label>Departamento</label> 
+<%= f.text_field(:departamento) %></p>
+
+<label>Area</label>
+<%= f.text_field(:area) %></p>
+
+<label>Creditos</label>
+<%= f.text_field(:creditos) %></p>
+
+
+<%= f.submit %>
+<% end %>
+
