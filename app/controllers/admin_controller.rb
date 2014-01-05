@@ -79,6 +79,7 @@ class AdminController < ApplicationController
                             :tipo_ayudante_lab => peticion.tipo_ayudante_lab
                             :tipo_ayudante_cor => peticion.tipo_ayudante_cor
                             )
+    
   end
 
   def rechazar_peticion
