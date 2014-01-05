@@ -19,6 +19,7 @@ TSC2013::Application.routes.draw do
   get "admin/index"
   get "admin/profe_new" => "admin#profe_new"
   post "admin/profe_new" => "admin#crear"
+  
 #AUTHENTIFICATION
   get "auth/login"
   root :to  => "auth#login"
