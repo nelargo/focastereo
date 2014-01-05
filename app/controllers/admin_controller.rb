@@ -79,10 +79,13 @@ class AdminController < ApplicationController
                             :tipo_ayudante_lab => peticion.tipo_ayudante_lab,
                             :tipo_ayudante_cor => peticion.tipo_ayudante_cor
                             )
+    peticion.destroy
     redirect_to :action => "peticiones"
   end
 
   def rechazar_peticion
+    peticion = Editar_ramo.find_by_id(params[:id])
+    peticion.destroy
   end
 
 
