@@ -18,17 +18,17 @@ TSC2013::Application.routes.draw do
 #ADMINISTRACION  
   get "admin/index"
   get "admin/ramo_new"
-  get "admin/verRamo"         => "admin#verRamo"
-  get "admin/editarRamo/:id"  => "admin#editarRamo",        :as => 'editar_ramo_admin' 
-  post "admin/editarRamo"     => "admin#editar"
-  get "admin/profe_new"       => "admin#profe_new"
-  post "admin/profe_new"      => "admin#crear"
-  get "admin/ramo_new"        => "admin#ramo_new"
-  post "admin/ramo_new"       => "admin#crear_ramo"
-  get "admin/peticiones"      => "admin#peticiones"
-  get "admin/ver_peticion/:id"=> "admin#ver_peticion",      :as => 'ver_peticion'
-  post "admin/ver_peticion/:id"=> "admin#aceptar_peticion",  :as => 'aceptar_peticion'
-  post "admin/ver_peticion/:id"=> "admin#rechazar_peticion", :as => 'rechazar_peticion'  
+  get "admin/verRamo"               => "admin#verRamo"
+  get "admin/editarRamo/:id"        => "admin#editarRamo",        :as => 'editar_ramo_admin' 
+  post "admin/editarRamo"           => "admin#editar"
+  get "admin/profe_new"             => "admin#profe_new"
+  post "admin/profe_new"            => "admin#crear"
+  get "admin/ramo_new"              => "admin#ramo_new"
+  post "admin/ramo_new"             => "admin#crear_ramo"
+  get "admin/peticiones"            => "admin#peticiones"
+  get "admin/ver_peticion/:id"      => "admin#ver_peticion",      :as => 'ver_peticion'
+  post "admin/aceptar_peticion/:id" => "admin#aceptar_peticion",  :as => 'aceptar_peticion'
+  post "admin/rechazar_peticion/:id"=> "admin#rechazar_peticion", :as => 'rechazar_peticion'  
 
 #AUTHENTIFICATION
   get "auth/login"
