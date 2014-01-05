@@ -18,6 +18,11 @@ class AlumnoController < ApplicationController
   	@ramos = Ramo.find_by_activo(1)
   end
 
+  def postular
+  end
+
+  def eliminar
+  end
 
 
   

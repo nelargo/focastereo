@@ -49,7 +49,7 @@ private
     #    body cuerpo
     #  end
     #end
-    redirect_to action: "asignaturas"
+    redirect_to action: "mis_cursos"
   end
   def postulaciones
     @postulaciones = Postular.where(id_curso: params[:id])
