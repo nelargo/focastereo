@@ -10,7 +10,7 @@ class AdminController < ApplicationController
 
  def crear_ramo
     @ramo = Ramo.new(params[:ramos])
-    if @Ramo.save
+    if @ramo.save
       flash[:notice] = "Registro Exitoso"
       flash[:color] = "valid"
     else
@@ -23,7 +23,7 @@ class AdminController < ApplicationController
 
   def crear
   	@profe = Profesor.new(params[:professor])
-    if @profesor.save
+    if @profe.save
       flash[:notice] = "Registro Exitoso"
       flash[:color] = "valid"
     else
