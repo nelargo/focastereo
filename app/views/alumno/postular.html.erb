@@ -11,10 +11,14 @@
 				<%  dummy = "|"
 					if r.tipo_ayudante_cat
 						dummy += "cat|"
+					end
       		if r.tipo_ayudante_lab
       			dummy += "lab|"
+      		end
       		if tipo_ayudante_cor
-      			dummy += "cor|" %>
+      			dummy += "cor|" 
+      		end %>
+
       	<td><%= dummy %></td>
 				<td></td>
 		<tr>
