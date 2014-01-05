@@ -1,10 +1,19 @@
-<%= form_for(:profesor, :url => "admin/profe_new") do |f| %>
+<%= form_for(:profesor, :url => "/admin/profe_new")  do |f| %>
 
-<p>Nombre: <%= f.text_field(:nombre) %></p>
-<p>Rol: <%= f.text_field(:rol) %></p>
-<p>Pasword: <%= f.text_field(:password) %></p>
-<p>Confirmacion: <%= f.text_field(:password_confirm) %></p>
-<p>Departamento: <%= f.text_field(:departamento) %></p>
-<p>Correo: <%= f.text_field(:mail) %></p>
-<p>Oficina: <%= f.text_field(:oficina) %></p>
+<p>Nombre: 
+<%= f.text_field(:nombre) %></p>
+<p>Rol: 
+<%= f.text_field(:rol) %></p>
+<p>Pasword: 
+<%= f.text_field(:password) %></p>
+<p>Confirmacion del Password: 
+<%= f.text_field(:password_confirm) %></p>
+<p>Departamento: 
+<%= f.text_field(:departamento) %></p>
+<p>Correo: 
+<%= f.text_field(:mail) %></p>
+<p>Oficina: 
+<%= f.text_field(:oficina) %></p>
+
+<%= f.submit %>
 <% end %>
