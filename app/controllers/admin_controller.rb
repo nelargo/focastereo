@@ -10,7 +10,7 @@ class AdminController < ApplicationController
   end
 
  def crear_ramo
-    @ramo = Ramo.new(params[:ramos])
+    @ramo = Ramo.new(ramo_params)
     if @ramo.save
       flash[:notice] = "Registro Exitoso"
       flash[:color] = "valid"
@@ -23,16 +23,17 @@ class AdminController < ApplicationController
 
 
   def crear
-  	@profe = Profesor.new(profe_params)
-    if @profe.save
+    @profe = Profesor.new(profe_params)
+    if @profe.save  
       flash[:notice] = "Registro Exitoso"
       flash[:color] = "valid"
-      @flag = "Profe Agregado"
+      redirect_to :action => "index"
     else
       flash[:notice] = "Registro fallido"
       flash[:color] = "invalid"
-    end
-    redirect_to :action => "index"
+    
+    redirect_to :action => "profe_new"
+      end
   end
 
   def verRamos
@@ -49,8 +50,12 @@ class AdminController < ApplicationController
   end
 
 private
- def profe_params
+  def profe_params
     params.require(:profesor).permit(:nombre, :rol, :password, :departamento, :mail, :oficina)
+  end
+
+  def ramo_params
+    params.require(:ramo).permit!
   end
 end
 
