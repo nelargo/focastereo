@@ -9,7 +9,7 @@
 <%= f.text_field(:nombre, :value => @ramo.nombre) %></p>
 
 <label>Profesor</label>
-<select class="form-control" name="course[profesor]">
+<select class="form-control" name="ramo[profesor]">
 				<% @profesores.each do |profesor|%>
 					<% if @ramo.profesor ==  profesor %>
 						<option value = <%= profesor %> selected><%= profesor %></option>
