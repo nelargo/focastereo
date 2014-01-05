@@ -52,7 +52,7 @@
 <% if  @ramo.activo%>
 				Correcion<%= f.check_box(:activo, :value => "1")%>
 			<% else %>
-				correcion<%= f.check_box(:activo, :value => "0")%>
+				Activo?<%= f.check_box(:activo, :value => "0")%>
 <% end %>
 
 <%= f.submit "Editar" %>
