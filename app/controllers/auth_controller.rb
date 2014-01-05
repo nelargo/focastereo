@@ -10,7 +10,7 @@ class AuthController < ApplicationController
 	    	session[:user_name] = authorized_user.usuario
 	    	session[:type] = "administrator"
 	     	flash[:notice] = "Bienvenido, Usted esta loggeado como #{authorized_user.usuario}"
-	      	redirect_to(:controller => 'administracion', :action => 'verCursos')
+	      	redirect_to(:controller => 'admin', :action => 'index')
 	      	return
 	      	
 	    else
