@@ -19,7 +19,7 @@ TSC2013::Application.routes.draw do
 #ADMINISTRACION  
   get "admin/index"
   get "admin/ramo_new"
-  get "admin/verRamo"
+  get "admin/verRamo" => "admin#verRamo"
   get "admin/profe_new" => "admin#profe_new"
   post "admin/profe_new" => "admin#crear"
   get "admin/ramo_new" => "admin#ramo_new"
