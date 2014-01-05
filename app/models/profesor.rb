@@ -8,7 +8,7 @@ class Profesor < ActiveRecord::Base
     validates_length_of :password, :in => 6..20, :on => :create
     validates :departamento, :presence => true
     validates :oficina, :presence => true
-    validates :anexo, :presence => true
+    validates :rol, :presence => true, :uniqueness => true
     
     before_save :encrypt_password
     after_save :clear_password
