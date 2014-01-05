@@ -65,8 +65,8 @@ class AdminController < ApplicationController
   end
 
   def ver_peticion
-    @original = Ramo.find_by_id(params[:ido])
-    @modif = Editar_ramo.find_by_id(params[:idp])
+    @peticion = Editar_ramo.find_by_id(params[:id])
+    @ramo = Ramo.find_by_id(@peticion.id_ramo)
   end
 
   def aceptar_peticion
