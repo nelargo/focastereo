@@ -5,7 +5,7 @@
 <% ramo = Ramo.find_by_id(pet.id_ramo) %>
 <tr><td><%= ramo.sigla %> - <%= ramo.nombre %></td>
 		<td><%= ramo.profesor %></td>
-		<td><%link_to "Ver", ver_peticion_path(pet.id) %></td>
+		<td><%= link_to "Ver", ver_peticion_path(pet.id) %></td>
 </tr>
 <% end %>
 
