@@ -74,7 +74,7 @@ class AdminController < ApplicationController
     ramo = Ramo.find_by_id(peticion.id_ramo)
     ramo.update_attributes(:sigla => peticion.sigla,
                             :nombre => peticion.nombre, 
-                            :num_ayudantes => peticion.can_ayudantes,
+                            :num_ayudantes => peticion.cant_ayudantes,
                             :tipo_ayudante_cat => peticion.tipo_ayudante_cat,
                             :tipo_ayudante_lab => peticion.tipo_ayudante_lab,
                             :tipo_ayudante_cor => peticion.tipo_ayudante_cor
