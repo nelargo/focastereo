@@ -1,6 +1,19 @@
 class Profesor < ActiveRecord::Base
-
-	def encrypt_password
+    attr_accessible :nombre, :rol, :password, :oficina, :mail, :departamento
+    EMAIL_REGEX = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i
+    validates :nombre, :presence => true, :length => { :in => 3..20 }
+  # validates :mail, :presence => true, :uniqueness => true, :format => EMAIL_REGEX
+    validates :mail, :presence => true, :uniqueness => true
+    validates :password, :confirmation => true 
+    validates_length_of :password, :in => 6..20, :on => :create
+    validates :departamento, :presence => true
+    validates :oficina, :presence => true
+    validates :anexo, :presence => true
+    
+    before_save :encrypt_password
+    after_save :clear_password
+	
+  def encrypt_password
 		require 'digest/sha1'
   		if password.present?
     		self.password= Digest::SHA1.hexdigest(password)

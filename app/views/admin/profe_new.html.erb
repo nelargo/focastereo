@@ -1,2 +1,10 @@
-<h1>Admin#profe_new</h1>
-<p>Find me in app/views/admin/profe_new.html.erb</p>
+<%= form_for(:profesor, :url => "admin/profe_new") do |f| %>
+
+<p>Nombre: <%= f.text_field(:nombre) %></p>
+<p>Rol: <%= f.text_field(:rol) %></p>
+<p>Pasword: <%= f.text_field(:password) %></p>
+<p>Confirmacion: <%= f.text_field(:password_confirm) %></p>
+<p>Departamento: <%= f.text_field(:departamento) %></p>
+<p>Correo: <%= f.text_field(:mail) %></p>
+<p>Oficina: <%= f.text_field(:oficina) %></p>
+<% end %>
