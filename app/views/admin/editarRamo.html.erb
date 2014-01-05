@@ -49,7 +49,12 @@
 
 <label>Creditos</label>
 <%= f.number_field(:creditos, :value => @ramo.creditos) %></p>
-
+<% if  @ramo.activo%>
+				Correcion<%= f.check_box(:activo, :value => "1")%>
+			<% else %>
+				correcion<%= f.check_box(:activo, :value => "0")%>
+<% end %>
 
 <%= f.submit "Editar" %>
 <% end %>
+
