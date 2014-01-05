@@ -8,9 +8,22 @@ class AdminController < ApplicationController
   def profe_new
   end
 
+ def crear_ramo
+    @ramo = Ramo.new(params[:ramos])
+    if @ramo.save
+      flash[:notice] = "Registro Exitoso"
+      flash[:color] = "valid"
+    else
+      flash[:notice] = "Registro fallido"
+      flash[:color] = "invalid"
+    end
+    redirect_to :action => "index"
+  end
+
+
   def crear
   	@profe = Profesor.new(params[:professor])
-    if @profesor.save
+    if @profe.save
       flash[:notice] = "Registro Exitoso"
       flash[:color] = "valid"
     else

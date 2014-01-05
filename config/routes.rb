@@ -1,6 +1,7 @@
 TSC2013::Application.routes.draw do
 
  
+  get "admin/ramo_new"
   get "admin/verRamo"
 #ALUMNO
 
@@ -19,7 +20,8 @@ TSC2013::Application.routes.draw do
   get "admin/index"
   get "admin/profe_new" => "admin#profe_new"
   post "admin/profe_new" => "admin#crear"
-
+  get "admin/ramo_new" => "admin#ramo_new"
+  post "admin/ramo_new" => "admin#crear_ramo"
 #AUTHENTIFICATION
   get "auth/login"
   root :to  => "auth#login"
