@@ -70,10 +70,21 @@ class AdminController < ApplicationController
   end
 
   def aceptar_peticion
+    peticion = Editar_ramo.find_by_id(params[:id])
+    ramo = Ramo.find_by_id(peticion.id_ramo)
+    ramo.update_attributes(:sigla => peticion.sigla,
+                            :nombre => peticion.nombre, 
+                            :num_ayudantes => peticion.can_ayudantes,
+                            :tipo_ayudante_cat => peticion.tipo_ayudante_cat
+                            :tipo_ayudante_lab => peticion.tipo_ayudante_lab
+                            :tipo_ayudante_cor => peticion.tipo_ayudante_cor
+                            )
   end
 
   def rechazar_peticion
   end
+
+
 
 private
   def profe_params

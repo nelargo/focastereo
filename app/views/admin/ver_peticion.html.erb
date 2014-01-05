@@ -21,4 +21,7 @@
 <tr><td>Criterio Seleccion</td>
 		<td><%= %></td>
 		<td><%= @peticion.criterio%></td></tr>
+<tr><td></td>
+		<td><% link_to "Aceptar", aceptar_peticion_path(@peticion.id) %></td>
+		<td><% link_to "Rechazar", rechazar_peticion_path(@peticion.id) %></td>
 </table>

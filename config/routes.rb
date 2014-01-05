@@ -9,24 +9,26 @@ TSC2013::Application.routes.draw do
 #PROFESORES  
   get "profe/index"
   get "profe/mis_cursos/"                       => "profe#mis_cursos"
-  get "profe/editarRamo/:id"                    => "profe#editarRamo", :as => 'editar_ramo'
+  get "profe/editarRamo/:id"                    => "profe#editarRamo",        :as => 'editar_ramo'
   post "profe/editarRamo/id"                    => "profe#procesarEditarRamo"
-  get "profe/postulaciones/:id"                 => "profe#postulaciones", :as => 'postulaciones'
-  get "profe/rechazar/:idPostulacion/:idCurso"  => "profe#rechazar", :as => 'rechazar'
-  get "profe/aceptar/:idPostulacion/:idCurso"   => "profe#aceptar", :as => 'aceptar'
+  get "profe/postulaciones/:id"                 => "profe#postulaciones",     :as => 'postulaciones'
+  get "profe/rechazar/:idPostulacion/:idCurso"  => "profe#rechazar",          :as => 'rechazar'
+  get "profe/aceptar/:idPostulacion/:idCurso"   => "profe#aceptar",           :as => 'aceptar'
 
 #ADMINISTRACION  
   get "admin/index"
   get "admin/ramo_new"
   get "admin/verRamo"         => "admin#verRamo"
-  get "admin/editarRamo/:id"  => "admin#editarRamo", :as => 'editar_ramo_admin' 
+  get "admin/editarRamo/:id"  => "admin#editarRamo",        :as => 'editar_ramo_admin' 
   post "admin/editarRamo"     => "admin#editar"
   get "admin/profe_new"       => "admin#profe_new"
   post "admin/profe_new"      => "admin#crear"
   get "admin/ramo_new"        => "admin#ramo_new"
   post "admin/ramo_new"       => "admin#crear_ramo"
   get "admin/peticiones"      => "admin#peticiones"
-  get "admin/ver_peticion/:id"=> "admin#ver_peticion", :as => 'ver_peticion'
+  get "admin/ver_peticion/:id"=> "admin#ver_peticion",      :as => 'ver_peticion'
+  get "admin/ver_peticion/:id"=> "admin#aceptar_peticion",  :as => 'aceptar_peticion'
+  get "admin/ver_peticion/:id"=> "admin#rechazar_peticion", :as => 'rechazar_peticion'  
 
 #AUTHENTIFICATION
   get "auth/login"
