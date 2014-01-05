@@ -27,7 +27,7 @@ class AdminController < ApplicationController
   end
 
   def editar
-    curso = Ramo.find(params[:ramo][:id_r])
+    curso = Ramo.find(params[:ramo][:id])
     curso.update_attributes(ramo_params)
     redirect_to "admin/index"
   end
