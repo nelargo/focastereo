@@ -27,7 +27,7 @@ private
       return
     end
   end  
-  def procesarEditarAsignatura
+  def procesarEditarRamo
     profe = Profesor.find_by_rol(session[:id_usuario])
     ramo = Ramo.find(params[:editar_ramos][:id_curso])
     if ramo.profesor != profesor.nombre
