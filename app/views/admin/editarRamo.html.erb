@@ -1,0 +1,56 @@
+<h1> ASD </h1>
+
+<% form_for(:ramo, :url => "/admin/editarRamo") do |f| %>
+<label>Sigla</label>
+<%= f.text_field(:sigla), :value => @ramo.sigla %></p>
+
+<label>Nombre</label>
+<%= f.text_field(:nombre) :value => @ramo.nombre%></p>
+
+<label>Profesor</label>
+<%= f.text_field(:profesor) :value => @ramo.profesor %></p>
+
+<select class="form-control" name="course[profesor]">
+				<% @profesores.each do |profesor|%>
+					<% if @curso.profesor ==  profesor %>
+						<option value = <%= profesor %> selected><%= profesor %></option>
+					<% else %>
+						<option value = <%= profesor %> ><%= profesor %></option>
+					<% end %>
+				<% end %>
+</select>
+
+<br>
+<label>Tipo de ayundates</label>
+<% if  @curso.tipo_ayudante_cat %>
+				Catedra<%= check_box_tag(:tipo_ayudante_cat,1, true, :class => "checkbox")%>
+			<% else %>
+				Catedra<%= check_box_tag(:tipo_ayudante_cat,1, false, :class => "checkbox")%>
+<% end %>
+<% if  @curso.tipo_ayudante_lab %>
+				Laboratorio<%= check_box_tag(:tipo_ayudante_lab,1, true, :class => "checkbox")%>
+			<% else %>
+				Laboratorio<%= check_box_tag(:tipo_ayudante_lab,1, false, :class => "checkbox")%>
+<% end %>
+
+<% if  @curso.tipo_ayudante_cor%>
+				Correcion<%= check_box_tag(:tipo_ayudante_cor,1, true, :class => "checkbox")%>
+			<% else %>
+				correcion<%= check_box_tag(:tipo_ayudante_cor,1, false, :class => "checkbox")%>
+<% end %>
+
+<label>Campus</label>
+<%= f.text_field(:campus) %></p>
+
+<label>Departamento</label> 
+<%= f.text_field(:departamento) %></p>
+
+<label>Area</label>
+<%= f.text_field(:area) %></p>
+
+<label>Creditos</label>
+<%= f.number_field(:creditos) %></p>
+
+
+<%= f.submit %>
+<% end %>

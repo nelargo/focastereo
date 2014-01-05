@@ -21,6 +21,14 @@ class AdminController < ApplicationController
     redirect_to :action => "index"
   end
 
+  def editarRamo
+    @ramos = Ramo.find_by_id(params[:id])
+    @profesores = Profesor.pluck(:nombre)
+  end
+
+  def editar
+  end
+
 
   def crear
     @profe = Profesor.new(profe_params)

@@ -1,6 +1,5 @@
 TSC2013::Application.routes.draw do
 
-  get "/logout" => "application#logout", :as => "logout"  
 #ALUMNO
 
   get "alumno/index"
@@ -9,27 +8,29 @@ TSC2013::Application.routes.draw do
 
 #PROFESORES  
   get "profe/index"
-  get "profe/mis_cursos/" => "profe#mis_cursos"
-  get "profe/editarRamo/:id" => "profe#editarRamo", :as => 'editar_ramo'
-  post "profe/editarRamo/id" => "profe#procesarEditarRamo"
-  get "profe/postulaciones/:id" => "profe#postulaciones", :as => 'postulaciones'
-  get "profe/rechazar/:idPostulacion/:idCurso" => "profe#rechazar", :as => 'rechazar'
-  get "profe/aceptar/:idPostulacion/:idCurso" => "profe#aceptar", :as => 'aceptar'
+  get "profe/mis_cursos/"                       => "profe#mis_cursos"
+  get "profe/editarRamo/:id"                    => "profe#editarRamo", :as => 'editar_ramo'
+  post "profe/editarRamo/id"                    => "profe#procesarEditarRamo"
+  get "profe/postulaciones/:id"                 => "profe#postulaciones", :as => 'postulaciones'
+  get "profe/rechazar/:idPostulacion/:idCurso"  => "profe#rechazar", :as => 'rechazar'
+  get "profe/aceptar/:idPostulacion/:idCurso"   => "profe#aceptar", :as => 'aceptar'
 
 #ADMINISTRACION  
   get "admin/index"
   get "admin/ramo_new"
-  get "admin/verRamo" => "admin#verRamo"
-  get "admin/profe_new" => "admin#profe_new"
-  post "admin/profe_new" => "admin#crear"
-  get "admin/ramo_new" => "admin#ramo_new"
-  post "admin/ramo_new" => "admin#crear_ramo"
+  get "admin/verRamo"         => "admin#verRamo"
+  get "admin/editarRamo/:id"  => "admin#editarRamo", :as 'editar_ramo'
+  post "admin/editarRamo/id"  => "admin#editar"
+  get "admin/profe_new"       => "admin#profe_new"
+  post "admin/profe_new"      => "admin#crear"
+  get "admin/ramo_new"        => "admin#ramo_new"
+  post "admin/ramo_new"       => "admin#crear_ramo"
 
 #AUTHENTIFICATION
   get "auth/login"
-  root :to  => "auth#login"
-  post "auth/intento_loginurl" => "auth#intento_login"
-
+  root :to                      => "auth#login"
+  post "auth/intento_loginurl"  => "auth#intento_login"
+  get "/logout"                 => "application#logout", :as => 'logout'
 
   
   # The priority is based upon order of creation: first created -> highest priority.
