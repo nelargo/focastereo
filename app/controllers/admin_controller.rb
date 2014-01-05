@@ -73,6 +73,7 @@ class AdminController < ApplicationController
   end
 
   def rechazar_peticion
+  end
 
 private
   def profe_params
