@@ -52,10 +52,10 @@
   <div class="collapse navbar-collapse navbar-ex1-collapse">
     <ul class="nav navbar-nav">      
       <li class="dropdown">
-        <%= link_to "Ver Ramos", :action => "verRamo" %>
-        <%= link_to "Agregar Ramo", :action => "ramo_new" %>
-        <%= link_to "Ver Peticiones", :action => "ver_peticion" %>
-        <%= link_to "Agregar Profesor", :action => "profe_new" %>
+        <%= link_to "Ver Ramos", :controller => "admin", :action => "verRamo" %>
+        <%= link_to "Agregar Ramo", :controller => "admin", :action => "ramo_new" %>
+        <%= link_to "Ver Peticiones", :controller => "admin", :action => "ver_peticion" %>
+        <%= link_to "Agregar Profesor", :controller => "admin", :action => "profe_new" %>
       </li>
     </ul>
 
