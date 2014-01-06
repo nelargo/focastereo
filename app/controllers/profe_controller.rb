@@ -83,7 +83,7 @@ class ProfeController < ApplicationController
 
 private
   def ramo_params
-    params.request(:editar_ramos).permit!
+    params.require(:editar_ramo).permit!
   end
 
 end
