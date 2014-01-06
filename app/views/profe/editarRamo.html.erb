@@ -16,9 +16,7 @@
 		laboratorio <%= f.check_box :tipo_ayudante_lab %>
 		correccion <%= f.check_box :tipo_ayudante_cor %>
 		<br>
-		<label>criterio</label>
-		<%= f.text_field :critero, :value => @ramo.critero %>
-		<%= f.hidden_field :id_ramo, :value => @ramo.id %>
+		
 		<br>
 		<%= f.submit "Enviar solicitud de cambio" %>
 		<a href="/profe/index">Volver</a>
