@@ -63,26 +63,26 @@ class ProfeController < ApplicationController
 
   def aceptar
     postulacion = Postular.find(params[:idPostulacion])
-    ramo = Ramo.find(postulacion.id_curso)
+    ramo = Ramo.find(postulacion.id_ramo)
     prof = Profesor.find_by_rol(session[:id_usuario])
     if curso.profesor != prof.nombre
       redirect_to root_path
       return
     end
-    postulacion.status = "aceptada"
+    postulacion.status = "Aceptado"
     postulacion.save
     redirect_to postulaciones_path(params[:idCurso])
   end
 
   def rechazar
     postulacion = Postular.find(params[:idPostulacion])
-    ramo = Ramo.find(postulacion.id_curso)
+    ramo = Ramo.find(postulacion.id_ramo)
     prof = Profesor.find_by_rol(session[:id_usuario])
     if curso.profesor != profesor.nombre
       redirect_to root_path
       return
     end
-    postulacion.status = "rechazada"
+    postulacion.status = "Rechazado"
     postulacion.save
     redirect_to postulaciones_path(params[:idCurso])
   end
