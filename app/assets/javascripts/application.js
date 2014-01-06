@@ -22,4 +22,4 @@
 //= require tabs_old
 //= require tabs
 //= require tab
-//= require holder
+

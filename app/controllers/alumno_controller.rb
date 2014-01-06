@@ -25,7 +25,7 @@ class AlumnoController < ApplicationController
   end
 
   def crear_postulacion
-    @post = Postulacion.new(postulacion_params)
+    @post = Postular.new(postulacion_params)
     @post.save
     redirect_to :action => "index"
   end
