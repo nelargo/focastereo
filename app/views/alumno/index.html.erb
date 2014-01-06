@@ -1,19 +1,21 @@
-<h1>Bienvenido</h1>
 <h2> Postulaciones </h2>
-<table>
-<tr><td>Ramo</td>
-		<td>Estado</td>
-		<td></td>
+<table class="table table-striped">
+	<thead>
+<tr><th>Ramo</th>
+		<th>Estado</th>
+		<th></th>
  	</tr>
+ </thead>
+ <tbody>
  	<% @postulaciones.each do |p| %>
  	<% ramo = Ramo.find_by_id(p.id_ramo) %>
  	<tr>
  		<td><%= ramo.nombre %></td>
  		<td><%= p.status %></td>
- 		<td></td>
+ 		<td><% link_to "Eliminar", :class => "btn btn-default"%></td>
 
  	</tr>
 <% end %>
-
+</tbody>
 </table>
 
