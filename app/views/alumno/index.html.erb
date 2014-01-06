@@ -4,17 +4,16 @@
 <tr><td>Ramo</td>
 		<td>Estado</td>
 		<td></td>
- </tr>
- <% @postulaciones.each do |p| %>
- <% ramo = Ramo.find_by_id(p.id_ramo) %>
- <tr>
+ 	</tr>
+ 	<% @postulaciones.each do |p| %>
+ 	<% ramo = Ramo.find_by_id(p.id_ramo) %>
+ 	<tr>
  		<td><%= ramo.nombre %></td>
  		<td>@postulacions.status</td>
  		<td></td>
 
-
- </tr>
-
+ 	</tr>
+<% end %>
 
 </table>
 
