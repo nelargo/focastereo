@@ -19,6 +19,7 @@ class ProfeController < ApplicationController
   	@profesor = Profesor.find_by_rol(session[:id_usuario])
   	@ramos = Ramo.all
   end
+
   def editarRamo
     @profesor = Profesor.find_by_rol(session[:id_usuario])
     @ramo = Ramo.find(params[:id])
@@ -27,6 +28,7 @@ class ProfeController < ApplicationController
       return
     end
   end  
+
   def procesarEditarRamo
     profe = Profesor.find_by_rol(session[:id_usuario])
     ramo = Ramo.find(params[:editar_ramo][:id_ramo])
@@ -51,11 +53,14 @@ class ProfeController < ApplicationController
     #end
     redirect_to action: "mis_cursos"
   end
+
   def postulaciones
     @postulaciones = Postular.where(id_curso: params[:id])
     #@postulaciones = Application.where(id_curso: params[:id], status_postulacion: "pendiente")
-    @etapa = Stage.find(1)
+    @etapa = Etapa.find(1)
   end
+
+
   def aceptar
     postulacion = Postular.find(params[:idPostulacion])
     ramo = Ramo.find(postulacion.id_curso)
@@ -68,6 +73,7 @@ class ProfeController < ApplicationController
     postulacion.save
     redirect_to postulaciones_path(params[:idCurso])
   end
+  
   def rechazar
     postulacion = Postular.find(params[:idPostulacion])
     ramo = Ramo.find(postulacion.id_curso)
