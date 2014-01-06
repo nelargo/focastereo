@@ -11,7 +11,7 @@
 		<label>cantidad de ayudantes</label>
 		<%= f.number_field :num_ayudantes, :value => @ramo.num_ayudantes %>
 		<br>
-		<label>tipo de ayundates</label>
+		<label>tipo de ayundates</label></br>
 		<% if  @ramo.tipo_ayudante_cat %>
 				Catedra<%= f.check_box(:tipo_ayudante_cat, :value => "1")%>
 			<% else %>
