@@ -34,7 +34,7 @@ class ProfeController < ApplicationController
       redirect_to root_path
       return
     end
-    solicitud_de_cambio = Editar_ramos.new(editar_ramo_params])
+    solicitud_de_cambio = Editar_ramos.new(editar_ramo_params)
     solicitud_de_cambio.save
     #@mail = 
     #require 'mail'
