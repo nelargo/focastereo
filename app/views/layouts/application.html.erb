@@ -15,7 +15,7 @@
     <!--%= stylesheet_link_tag "bootstrap.css", :media => "all" %-->
     <!--%= stylesheet_link_tag "justified-nav.css", :media => "all" %-->
 	<%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
      <!-- <link href="app/assets/stylesheets/bootstrap.css" rel="stylesheet">
     <link href="app/assets/stylesheets/justified-nav.css" rel="stylesheet">
@@ -78,6 +78,11 @@
           <li><a href="profe_new.html">Agregar Profesor</a></li>        
         </ul>
         </li>
+    </ul>
+
+    <ul class="nav navbar-nav navbar-right">
+      <li><%= link_to "Cerrar Sesión", logout_path%>
+      </li>
     </ul>
     </div>
     
