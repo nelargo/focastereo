@@ -1,4 +1,4 @@
-
+<h2> Agregar Profesor </h2>
 <%= form_for(:profesor, :url => "/admin/profe_new")  do |f| %>
 
 <p>Nombre: 
@@ -16,5 +16,5 @@
 <p>Oficina: 
 <%= f.text_field(:oficina) %></p>
 
-<%= f.submit %>
+<%= f.submit 'Agregar Profesor' %>
 <% end %>
