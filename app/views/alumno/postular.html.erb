@@ -1,9 +1,11 @@
-<table>
-	<tr><td>Sigla</td>
-			<td>Nombre</td>
-			<td>Tipo</td>
-			<td></td>
+<table class="table table-striped">
+	<thead>
+	<tr><th>Sigla</th>
+			<th>Nombre</th>
+			<th>Tipo</th>
+			<th></th>
 	</tr>
+	<tbody>
 	<% @ramos.each do |r| %>
 		<tr><td><%= r.sigla %></td>
 				<td><%= r.nombre %></td>
@@ -22,4 +24,5 @@
 				<td><%= link_to "Postular", nueva_postulacion_path(r.id), :class => "btn btn-success" %></td>
 		<tr>
 	<% end %>
+</tbody>
 </table>
