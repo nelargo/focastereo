@@ -4,9 +4,9 @@
 <%= f.hidden_field :id_alumno, :value => session[:id_usuario] %>
 
 <p>Tipo
-catedra <%= f.check_box :tipo_ayudante_cat %>
-laboratorio <%= f.check_box :tipo_ayudante_lab %>
-correccion <%= f.check_box :tipo_ayudante_cor %></p>
+catedra <%= f.check_box :cat %>
+laboratorio <%= f.check_box :lab %>
+correccion <%= f.check_box :cor %></p>
 
 <p>Prioridad Académica: 
 <%= f.number_field(:prioridad_alumno) %></p>
