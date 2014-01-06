@@ -1,6 +1,6 @@
 <%= form_for(:postulacion, :url => "/alumno/postulacion_new") do |f| %>
 
-<%= f.hidden_field :id_ramo, :value => @ramo.id %>
+<%= f.hidden_field :id_ramo, :value => @ramos.id %>
 <%= f.hidden_field :id_alumno, :value => session[:id_usuario] %>
 
 <p>Tipo
