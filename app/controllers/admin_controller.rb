@@ -83,7 +83,7 @@ class AdminController < ApplicationController
     redirect_to :action => "peticiones"
   end
 
-  def rechazar_peticion
+  def rechazar_peticion    
     peticion = Editar_ramo.find_by_id(params[:id])
     peticion.destroy
     redirect_to :action => "peticiones"
@@ -91,7 +91,10 @@ class AdminController < ApplicationController
 
   def cambiar_etapa
     etapa = Etapa.first
-    etapa.update_attributes(:activo => params[:id])
+    if etapa
+      etapa.update_attributes(:activo => params[:id])
+    else
+      etapa.create(:activo => params[:id])
     redirect_to :action => "index"
   end
 
