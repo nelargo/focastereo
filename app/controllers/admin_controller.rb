@@ -9,6 +9,10 @@ class AdminController < ApplicationController
   def profe_new
   end
 
+  def ramo_new
+    @profesores = Profesor.all
+  end
+
  def crear_ramo
     @ramo = Ramo.new(ramo_params)
     if @ramo.save

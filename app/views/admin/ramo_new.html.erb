@@ -10,7 +10,11 @@
 <%= f.text_field(:sigla) %></p>
 
 <label>Profesor</label>
-<%= f.text_field(:profesor) %></p>
+<select class="form-control" name="ramo[profesor]">
+				<% @profesores.each do |profesor|%>
+						<option value = <%= profesor %> ><%= profesor %></option>
+				<% end %>
+</select>
 
 <label>Número de ayudantes</label>
 <%= f.number_field(:num_ayudantes) %></p>
