@@ -7,6 +7,10 @@ class AlumnoController < ApplicationController
   	@postulaciones = Postular.where(:id_alumno => session[:id_usuario])
   end
 
+  def perfil
+    @alumno = Db_alumno.find_by_rol([:id_usuario])
+  end
+
   def checkAlumno
   	if session[:type] != "alumno"
   		redirect_to root_path

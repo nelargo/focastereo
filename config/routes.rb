@@ -3,6 +3,7 @@ TSC2013::Application.routes.draw do
 #ALUMNO
   
   get "alumno/index"
+  get "alumno/perfil"               => "alumno#perfil"
   get "alumno/postular"             => "alumno#postular"
   get "alumno/postulacion_new"
   get "alumno/postulacion_new/:id"  => "alumno#postulacion_new", :as => 'nueva_postulacion'
