@@ -15,13 +15,12 @@ class AlumnoController < ApplicationController
   		return
   	end
   end
-  def postulacion_new
-  end
+  
   def postular
   	@ramos = Ramo.where(:activo => 1)    
   end
 
-  def crear_postulacion
+  def postulacion_new
     @ramos = Ramo.find_by_id(params[:id])
   end
 
