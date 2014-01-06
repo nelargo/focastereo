@@ -51,12 +51,11 @@
        otro elemento que se pueda ocultar al minimizar la barra -->
   <div class="collapse navbar-collapse navbar-ex1-collapse">
     <ul class="nav navbar-nav">      
-      <li class="dropdown">
-        <%= link_to "Ver Ramos", :controller => "admin", :action => "verRamo" %>
-        <%= link_to "Agregar Ramo", :controller => "admin", :action => "ramo_new" %>
-        <%= link_to "Ver Peticiones", :controller => "admin", :action => "peticiones" %>
-        <%= link_to "Agregar Profesor", :controller => "admin", :action => "profe_new" %>
-      </li>
+        <li><a <%= link_to "Ver Ramos", :controller => "admin", :action => "verRamo" %></a></li>
+        <li><a <%= link_to "Agregar Ramo", :controller => "admin", :action => "ramo_new" %></a></li>
+        <li><a <%= link_to "Ver Peticiones", :controller => "admin", :action => "peticiones" %></a></li>
+        <li><a<%= link_to "Agregar Profesor", :controller => "admin", :action => "profe_new" %> </a></li>
+
     </ul>
 
     <ul class="nav navbar-nav navbar-right">
