@@ -15,7 +15,7 @@ class AlumnoController < ApplicationController
   		return
   	end
   end
-  
+
   def postular
   	@ramos = Ramo.where(:activo => 1)    
   end
@@ -24,7 +24,18 @@ class AlumnoController < ApplicationController
     @ramos = Ramo.find_by_id(params[:id])
   end
 
+  def crear_postulacion
+    @post = Postulacion.new(postulacion_params)
+    @post.save
+    redirect_to :action => "index"
+  end
+
   def eliminar_postulacion
+  end
+
+private
+  def postulacion_params
+    params.require(:postulacion).permit!
   end
  
 end

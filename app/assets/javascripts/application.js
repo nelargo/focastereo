@@ -15,3 +15,8 @@
 //= require turbolinks
 //= require_tree .
 //= require bootstrap
+
+require jquery-2.0.3.js
+require bootstrap.js
+require holder.js
+require tabs_old.js
