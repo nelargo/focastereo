@@ -1,6 +1,16 @@
 class AuthController < ApplicationController
+  
   def login
-	@al = Db_alumno.all
+		@al = Db_alumno.all
+		if session[:type] == "administrator"
+			redirect_to "/admin/index"
+		end
+		if session[:type] == "alumno"
+			redirect_to "/alumno/index"
+		end
+		if session[:type] == "profesor"
+			redirect_to "/profe/index"
+		end
   end
 
   def intento_login
