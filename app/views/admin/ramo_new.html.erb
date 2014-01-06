@@ -12,7 +12,7 @@
 <label>Profesor</label>
 <select class="form-control" name="ramo[profesor]">
 				<% @profesores.each do |profesor|%>
-						<option value = <%= profesor %> ><%= profesor %></option>
+						<option value = <%= profesor.nombre %> ><%= profesor.nombre %></option>
 				<% end %>
 </select>
 
