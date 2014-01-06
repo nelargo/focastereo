@@ -65,7 +65,7 @@ class ProfeController < ApplicationController
     postulacion = Postular.find(params[:idPostulacion])
     ramo = Ramo.find(postulacion.id_ramo)
     prof = Profesor.find_by_rol(session[:id_usuario])
-    if curso.profesor != prof.nombre
+    if ramo.profesor != prof.nombre
       redirect_to root_path
       return
     end
@@ -78,7 +78,7 @@ class ProfeController < ApplicationController
     postulacion = Postular.find(params[:idPostulacion])
     ramo = Ramo.find(postulacion.id_ramo)
     prof = Profesor.find_by_rol(session[:id_usuario])
-    if curso.profesor != profesor.nombre
+    if ramo.profesor != profesor.nombre
       redirect_to root_path
       return
     end
