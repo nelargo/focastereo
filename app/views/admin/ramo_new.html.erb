@@ -1,6 +1,5 @@
-<h1>Admin#ramo_new</h1>
-<p>Find me in app/views/admin/ramo_new.html.erb</p>
 
+<h2> "Agregar Ramo" </h2>
 
 <%= form_for(:ramo, :url => "/admin/ramo_new")  do |f| %>
 
@@ -36,6 +35,6 @@ correccion <%= f.check_box :tipo_ayudante_cor %>
 <%= f.number_field(:creditos) %></p>
 
 
-<%= f.submit %>
+<%= f.submit 'Agregar Ramo'%>
 <% end %>
 
