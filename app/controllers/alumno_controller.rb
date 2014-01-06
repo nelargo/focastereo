@@ -8,7 +8,7 @@ class AlumnoController < ApplicationController
   end
 
   def perfil
-    @alumno = Db_alumno.find_by_rol([:id_usuario])
+    @alumno = Db_alumno.find_by_rol(session[:id_usuario])
   end
 
   def checkAlumno
