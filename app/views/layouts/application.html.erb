@@ -15,11 +15,7 @@
     <!--%= stylesheet_link_tag "bootstrap.css", :media => "all" %-->
     <!--%= stylesheet_link_tag "justified-nav.css", :media => "all" %-->
 	<%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= javascript_include_tag "jquery-2.0.3" %>
-<%= javascript_include_tag "bootstrap" %>
-<%= javascript_include_tag "holder" %>
-<%= javascript_include_tag "tabs_old" %>
+  <%= javascript_include_tag "application", :media => "all" %>
   <%= csrf_meta_tags %>
      <!-- <link href="app/assets/stylesheets/bootstrap.css" rel="stylesheet">
     <link href="app/assets/stylesheets/justified-nav.css" rel="stylesheet">
@@ -89,15 +85,15 @@
 <% end %>
 
 
-<div class="wrapper">
+<div class="container">
 <%= yield %>
 </div>
 
 
-<%= javascript_include_tag "jquery-2.0.3" %>
+<!--%= javascript_include_tag "jquery-2.0.3" %>
 <%= javascript_include_tag "bootstrap" %>
 <%= javascript_include_tag "holder" %>
-<%= javascript_include_tag "tabs_old" %>
+<%= javascript_include_tag "tabs_old" %-->
 
 </body>
 </html>
