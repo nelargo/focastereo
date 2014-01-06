@@ -16,10 +16,10 @@
 //= require_tree 
 //= require bootstrap
 
-//=require jquery-2.0.3
-//=require bootstrap
+//= require jquery-2.0.3
+//= require bootstrap
 
-//=require tabs_old
-
-//=require tabs_old
-//=require holder
+//= require tabs_old
+//= require tabs
+//= require tab
+//= require holder
