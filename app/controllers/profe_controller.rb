@@ -55,7 +55,7 @@ class ProfeController < ApplicationController
   end
 
   def postulaciones
-    @postulaciones = Postular.where(id_curso: params[:id])
+    @postulaciones = Postular.where(id_ramo: params[:id])
     #@postulaciones = Application.where(id_curso: params[:id], status_postulacion: "pendiente")
     @etapa = Etapa.find(1)
   end
@@ -73,7 +73,7 @@ class ProfeController < ApplicationController
     postulacion.save
     redirect_to postulaciones_path(params[:idCurso])
   end
-  
+
   def rechazar
     postulacion = Postular.find(params[:idPostulacion])
     ramo = Ramo.find(postulacion.id_curso)
