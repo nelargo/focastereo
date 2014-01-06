@@ -13,6 +13,7 @@ class ProfeController < ApplicationController
 
   def index
   	@profesor = Profesor.find_by_rol(session[:id_usuario])
+    @etapa = Etapa.find(1)
   end
 
   def mis_cursos
