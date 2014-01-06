@@ -15,7 +15,8 @@ class AlumnoController < ApplicationController
   		return
   	end
   end
-
+  def postulacion_new
+  end
   def postular
   	@ramos = Ramo.where(:activo => 1)    
   end
