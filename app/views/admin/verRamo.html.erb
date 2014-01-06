@@ -22,8 +22,21 @@
 					<td><%= ramo.sigla %></td>
 					<td><%= ramo.nombre %></td>
 					<td><%= ramo.profesor %></td>
-					<td><%= ramo.num_ayudantes%></td>	
-					<td><%= ramo.tipo_ayudante%></td>
+					<td><%= ramo.num_ayudantes%></td>
+
+					<td><% dummy = "|"%>
+	      			<%if r.tipo_ayudante_cat %>
+	      				<% dummy = dummy + "cat|"%>
+	      			<% end %>
+	      			<%if r.tipo_ayudante_lab %>
+	      				<% dummy = dummy + "lab|"%>
+	      			<% end %>
+	      			<%if r.tipo_ayudante_cor %>
+	      				<% dummy = dummy + "cor|"%>
+	      			<% end %>
+	      			<%= dummy %>
+	      			</td>
+
 					<td><%= ramo.campus %></td>
 					<td><%= ramo.departamento %></td>
 					<td><%= ramo.area %></td>
