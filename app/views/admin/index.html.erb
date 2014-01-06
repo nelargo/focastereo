@@ -1,12 +1,4 @@
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-</head>
-
-
-<body>
-
 
 <h2> "Bienvenido Administrador" </h2>
 
@@ -21,7 +13,7 @@
 		<h2> Etapa Actual: Modificación Cursos </h2><%= link_to "Avanzar a siguiente etapa", cambiar_etapa_path(3) %>
 	<% end %>
 	<% if @etapa.activa == 3 %>
-		<h2> Etapa Actual: Creacion Cursos </h2><%= link_to "Avanzar a siguiente etapa", cambiar_etapa_path(4) %>
+		<h2> Etapa Actual: Resultado Modificaciones </h2><%= link_to "Avanzar a siguiente etapa", cambiar_etapa_path(4) %>
 	<% end %>
 	<% if @etapa.activa == 4 %>
 		<h2> Etapa Actual: Postulaciones </h2><%= link_to "Avanzar a siguiente etapa", cambiar_etapa_path(5) %>
@@ -33,10 +25,3 @@
 	<%= link_to "Comenzar Proceso" , cambiar_etapa_path(1)%>
 <% end %>
 
-<%= javascript_include_tag "jquery-2.0.3" %>
-<%= javascript_include_tag "bootstrap" %>
-<%= javascript_include_tag "holder" %>
-<%= javascript_include_tag "tabs_old" %>
-
-</body>
-</html>

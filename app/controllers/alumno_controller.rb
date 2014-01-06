@@ -3,7 +3,7 @@ class AlumnoController < ApplicationController
 
   def index
   	@user = Db_alumno.find_by_rol(session[:id_usuario])
-  	@etapa = Etapa.all
+  	@etapa = Etapa.find(1)
   	@postulaciones = Postular.where(:id_alumno => session[:id_usuario])
   end
 

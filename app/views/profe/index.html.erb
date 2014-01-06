@@ -1,4 +1,26 @@
-<h1>Index para los profesores</h1>
+<h2>Noticias</h2>
+<table class="table table-striped">
+	<thead><tr><th>Estado Actual del Proceso</th> </tr> </thead>
+	<tbody><tr><% if @etapa != nil %>
+	<% if @etapa.activa == 0 %>
+		Proceso Finalizado
+	<% end %>
+	<% if @etapa.activa == 1 %>
+		Creación de Ramos
+	<% end %>
+	<% if @etapa.activa == 2 %>
+		Modificación Ramos
+	<% end %>
+	<% if @etapa.activa == 3 %>
+		Resultados Modificaciones 
+	<% end %>
+	<% if @etapa.activa == 4 %>
+		Postulaciones
+	<% end %>
+	<% if @etapa.activa == 5 %>
+		Entrega de Resultados
+	<% end %>
+ <td> </td> </tr>  </tbody></table>
 
 <table class="table table-bordered">
 			<h3><span class="label label-info">Datos personales</span></h3>
