@@ -34,8 +34,8 @@ class ProfeController < ApplicationController
       redirect_to root_path
       return
     end
-    solicitud_de_cambio = Editar_ramos.new(editarRamo_params)
-    solicitud_de_cambio.save
+    @solicitud_de_cambio = Editar_ramo.new(ramo_params)
+    @solicitud_de_cambio.save
     #@mail = 
     #require 'mail'
     #sujeto = params[:mailSubject]
@@ -82,7 +82,7 @@ class ProfeController < ApplicationController
   end
 
 private
-  def editarRamo_params
+  def ramo_params
     params.request(:editar_ramos).permit!
   end
 
