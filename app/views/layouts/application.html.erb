@@ -23,7 +23,10 @@
 <body>
 
 
-
+<!-- MENU FIJADO EN TOP -->
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <!-- El logotipo y el icono que despliega el menú se agrupan
+       para mostrarlos mejor en los dispositivos móviles -->
 <%if session[:type] == "alumno" %>
 <% end %>
 
@@ -33,10 +36,7 @@
 <%if session[:type] == "administrador" %>
 
 
-<!-- MENU FIJADO EN TOP -->
-<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-  <!-- El logotipo y el icono que despliega el menú se agrupan
-       para mostrarlos mejor en los dispositivos móviles -->
+
 
   <div class="navbar-header">
     <button type="button" class="navbar-toggle" data-toggle="collapse"
@@ -83,9 +83,10 @@
         </li>
     </ul>
     </div>
-    </nav>
+    
 
 <% end %>
+</nav>
 <%= yield %>
 
 

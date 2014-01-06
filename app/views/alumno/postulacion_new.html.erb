@@ -1,0 +1,22 @@
+<%= form_for(:postulacion, :url => "/alumno/postulacion_new") do |f| %>
+
+<%= f.hidden_field :id_ramo, :value => @ramo.id %>
+<%= f.hidden_field :id_alumno, :value => session[:id_usuario] %>
+
+<p>Tipo
+catedra <%= f.check_box :tipo_ayudante_cat %>
+laboratorio <%= f.check_box :tipo_ayudante_lab %>
+correccion <%= f.check_box :tipo_ayudante_cor %></p>
+
+<p>Prioridad Académica: 
+<%= f.number_field(:prioridad_alumno) %></p>
+
+<p>Numero de veces que ha sido ayudante: 
+<%= f.number_field(:num_veces_ayu) %></p>
+
+<p>Prioridad: 
+<%= f.number_field(:prioridad) %></p>
+
+<%= f.submit %>
+
+<% end %>

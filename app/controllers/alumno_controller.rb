@@ -20,10 +20,11 @@ class AlumnoController < ApplicationController
   	@ramos = Ramo.where(:activo => 1)    
   end
 
-  def crear  	
+  def crear_postulacion
+    @ramos = Ramo.find_by_id(params[:id])
   end
 
-  def eliminar
+  def eliminar_postulacion
   end
  
 end
