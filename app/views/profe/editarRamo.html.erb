@@ -12,9 +12,24 @@
 		<%= f.number_field :num_ayudantes, :value => @ramo.num_ayudantes %>
 		<br>
 		<label>tipo de ayundates</label>
-		catedra <%= f.check_box :tipo_ayudante_cat, :value => @ramo.tipo_ayudante_cat %>
-		laboratorio <%= f.check_box :tipo_ayudante_lab, :value => @ramo.tipo_ayudante_lab %>
-		correccion <%= f.check_box :tipo_ayudante_cor, :value => @ramo.tipo_ayudante_cor %>
+		<% if  @ramo.tipo_ayudante_cat %>
+				Catedra<%= f.check_box(:tipo_ayudante_cat, :value => "1")%>
+			<% else %>
+				Catedra<%= f.check_box(:tipo_ayudante_cat,:value => "0")%>
+<% end %>
+</br>
+<% if  @ramo.tipo_ayudante_lab %>
+				Laboratorio<%= f.check_box(:tipo_ayudante_lab, :value => "1")%>
+			<% else %>
+				Laboratorio<%= f.check_box(:tipo_ayudante_lab,:value =>"0")%>
+<% end %>
+</br>
+<% if  @ramo.tipo_ayudante_cor%>
+				Correcion<%= f.check_box(:tipo_ayudante_cor, :value => "1")%>
+			<% else %>
+				correcion<%= f.check_box(:tipo_ayudante_cor, :value => "0")%>
+<% end %>
+</br>
 		<br>
 		
 		<br>
