@@ -1,7 +1,8 @@
 <h2> Cambios Solicitados por el Profesor "<%= @ramo.profesor %>" </h2>
-<table>
-<tr><td>Campo</td><td>Original</td><td> Nuevo </td> </tr>
-
+<table<table class="table table-striped">
+	<thead><tr><th>Campo</th><th>Original</th><th> Nuevo </th> </tr>
+</thead>
+<tbody>
 <tr><td>Sigla</td>
 		<td><%= @ramo.sigla%></td>
 		<td><%= @peticion.sigla%></td></tr>
@@ -17,11 +18,8 @@
 <tr><td>Tipo Ayudantes</td>
 		<td><%= %></td>
 		<td><%= %></td></tr>
-
-<tr><td>Criterio Seleccion</td>
-		<td><%= %></td>
-		<td><%= @peticion.criterio%></td></tr>
 <tr><td></td>
-		<td><%= link_to "Aceptar", aceptar_peticion_path(@peticion.id) %></td>
-		<td><%= link_to "Rechazar", rechazar_peticion_path(@peticion.id) %></td>
+		<td><%= link_to "Aceptar", aceptar_peticion_path(@peticion.id), :class => "btn-success" %></td>
+		<td><%= link_to "Rechazar", rechazar_peticion_path(@peticion.id), :class => "btn-success" %></td>
+		</tbody>
 </table>

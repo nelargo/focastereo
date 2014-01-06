@@ -1,5 +1,9 @@
-<table>
-<tr><td>Sigla - Nombre</td><td>Profesor</td><td></td>
+<table<table class="table table-striped">
+	<thead><tr><th>Sigla - Nombre</th>
+						<th>Profesor</th>
+						<th></th>
+	</thead>
+	<tbody>
 <% @p.each do |pet| %>
 <% ramo = Ramo.find_by_id(pet.id_ramo) %>
 <tr><td><%= ramo.sigla %> - <%= ramo.nombre %></td>
@@ -7,5 +11,5 @@
 		<td><%= link_to "Detalles", ver_peticion_path(pet.id) %></td>
 </tr>
 <% end %>
-
+</tbody>
 </table>
