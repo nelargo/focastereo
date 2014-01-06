@@ -3,6 +3,7 @@
 	<%= form_for(:editar_ramo, :url => "/profe/editarRamo") do |f| %>
 
 		<label>sigla</label>
+		<%= f.hidden_field :id, :value => @ramo.id %>
 		<%= f.text_field :sigla, :value => @ramo.sigla %>
 		<br>
 		<label>nombre</label>
@@ -16,22 +17,19 @@
 				Catedra<%= f.check_box(:tipo_ayudante_cat, :value => "1")%>
 			<% else %>
 				Catedra<%= f.check_box(:tipo_ayudante_cat,:value => "0")%>
-<% end %>
-</br>
-<% if  @ramo.tipo_ayudante_lab %>
+		<% end %>
+		</br>
+		<% if  @ramo.tipo_ayudante_lab %>
 				Laboratorio<%= f.check_box(:tipo_ayudante_lab, :value => "1")%>
 			<% else %>
 				Laboratorio<%= f.check_box(:tipo_ayudante_lab,:value =>"0")%>
-<% end %>
-</br>
-<% if  @ramo.tipo_ayudante_cor%>
+		<% end %>
+		</br>
+		<% if  @ramo.tipo_ayudante_cor%>
 				Correcion<%= f.check_box(:tipo_ayudante_cor, :value => "1")%>
 			<% else %>
 				correcion<%= f.check_box(:tipo_ayudante_cor, :value => "0")%>
-<% end %>
-</br>
-		<br>
-		
+		<% end %>
 		<br>
 		<%= f.submit "Enviar solicitud de cambio" %>
 		<a href="/profe/index">Volver</a>

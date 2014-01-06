@@ -29,12 +29,12 @@ class ProfeController < ApplicationController
   end  
   def procesarEditarRamo
     profe = Profesor.find_by_rol(session[:id_usuario])
-    ramo = Ramo.find(params[:editar_ramos][:id_curso])
+    ramo = Ramo.find(params[:editar_ramos][:id])
     if ramo.profesor != profesor.nombre
       redirect_to root_path
       return
     end
-    solicitud_de_cambio = Editar_ramos.new(params[:editar_ramos])
+    solicitud_de_cambio = Editar_ramos.new(editar_ramo_params])
     solicitud_de_cambio.save
     #@mail = 
     #require 'mail'
@@ -79,6 +79,11 @@ class ProfeController < ApplicationController
     postulacion.status = "rechazada"
     postulacion.save
     redirect_to postulaciones_path(params[:idCurso])
+  end
+
+  private
+  def editar_ramo_params
+    params.request(:editar_ramos).permit!
   end
 
 end
