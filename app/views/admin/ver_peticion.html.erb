@@ -16,8 +16,28 @@
 		<td><%= @peticion.cant_ayudantes%></td></tr>
 
 <tr><td>Tipo Ayudantes</td>
-		<td><%= %></td>
-		<td><%= %></td></tr>
+		<td><% dummy = "|"%>
+	      			<%if @ramo.tipo_ayudante_cat %>
+	      				<% dummy = dummy + "catedra|"%>
+	      			<% end %>
+	      			<%if @ramo.tipo_ayudante_lab %>
+	      				<% dummy = dummy + "laboratorio|"%>
+	      			<% end %>
+	      			<%if @ramo.tipo_ayudante_cor %>
+	      				<% dummy = dummy + "corrección|"%>
+	      			<% end %>
+	      			<%= dummy %></td>
+		<td><% dummy1 = "|"%>
+	      			<%if @peticion.tipo_ayudante_cat %>
+	      				<% dummy1 = dummy1 + "catedra|"%>
+	      			<% end %>
+	      			<%if @peticion.tipo_ayudante_lab %>
+	      				<% dummy1 = dummy1 + "laboratorio|"%>
+	      			<% end %>
+	      			<%if @peticion.tipo_ayudante_cor %>
+	      				<% dummy1 = dummy1 + "corrección|"%>
+	      			<% end %>
+	      			<%= dummy1 %></td></tr>
 <tr><td></td>
 		<td><%= link_to "Aceptar", aceptar_peticion_path(@peticion.id), :class => "btn-success" %></td>
 		<td><%= link_to "Rechazar", rechazar_peticion_path(@peticion.id), :class => "btn-success" %></td>
