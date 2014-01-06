@@ -2,28 +2,34 @@
 
 <h2> "Bienvenido Administrador" </h2>
 <table class="table table-striped">
-	<thead><tr><th>Estado Actual del Proceso</th> </tr> </thead>
+	<thead><tr><th>Estado Actual del Proceso</th> <th></th> </tr> </thead>
 	<tbody><tr><td><% if @etapa != nil %>
 	<% if @etapa.activa == 0 %>
-		Proceso Finalizado <%= link_to "Comenzar Proceso", cambiar_etapa_path(1), :class => "btn btn-succes" %>
+		Proceso Finalizado </td>
+		<td><%= link_to "Comenzar Proceso", cambiar_etapa_path(1), :class => "btn btn-succes" %></td>
 	<% end %>
 	<% if @etapa.activa == 1 %>
-		Creación de Ramos <%= link_to "Avanzar a siguiente etapa", cambiar_etapa_path(2), :class => "btn btn-succes" %>
+		Creación de Ramos </td>
+		<td><%= link_to "Avanzar a siguiente etapa", cambiar_etapa_path(2), :class => "btn btn-succes" %></td>
 	<% end %>
 	<% if @etapa.activa == 2 %>
-		Modificación Cursos <%= link_to "Avanzar a siguiente etapa", cambiar_etapa_path(3), :class => "btn btn-succes" %>
+		Modificación Cursos </td>
+		<td><%= link_to "Avanzar a siguiente etapa", cambiar_etapa_path(3), :class => "btn btn-succes" %></td>
 	<% end %>
 	<% if @etapa.activa == 3 %>
-		Resultado Modificaciones <%= link_to "Avanzar a siguiente etapa", cambiar_etapa_path(4), :class => "btn btn-succes" %>
+		Resultado Modificaciones </td>
+		<td><%= link_to "Avanzar a siguiente etapa", cambiar_etapa_path(4), :class => "btn btn-succes" %></td>
 	<% end %>
 	<% if @etapa.activa == 4 %>
-		Postulaciones <%= link_to "Avanzar a siguiente etapa", cambiar_etapa_path(5), :class => "btn btn-succes" %>
+		Postulaciones </td>
+		<td><%= link_to "Avanzar a siguiente etapa", cambiar_etapa_path(5), :class => "btn btn-succes" %></td>
 	<% end %>
 	<% if @etapa.activa == 5 %>
-		Entrega de Resultados<%= link_to "Finalizar Proceso", cambiar_etapa_path(0), :class => "btn btn-succes" %>
+		Entrega de Resultados</td>
+		<td><%= link_to "Finalizar Proceso", cambiar_etapa_path(0), :class => "btn btn-succes" %></td>
 	<% end %>
 <% else %>
-	<%= link_to "Comenzar Proceso" , cambiar_etapa_path(1)%>
+	<%= link_to "Comenzar Proceso" , cambiar_etapa_path(1)%></td><td></td>
 <% end %>
 </td> </tr>  </tbody></table>
 
