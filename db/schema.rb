@@ -57,8 +57,10 @@ ActiveRecord::Schema.define(version: 20140104094656) do
 
   create_table "postulars", force: true do |t|
     t.integer  "id_alumno"
-    t.string   "nom_ramo"
-    t.string   "tipo_postulacion"
+    t.integer  "id_ramo"
+    t.boolean  "cat"
+    t.boolean  "lab"
+    t.boolean  "cor"
     t.integer  "prioridad"
     t.integer  "prioridad_alumno"
     t.integer  "num_veces_ayu"
