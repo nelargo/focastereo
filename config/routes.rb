@@ -27,8 +27,9 @@ TSC2013::Application.routes.draw do
   post "admin/ramo_new"             => "admin#crear_ramo"
   get "admin/peticiones"            => "admin#peticiones"
   get "admin/ver_peticion/:id"      => "admin#ver_peticion",      :as => 'ver_peticion'
-  get "admin/aceptar_peticion/:id" => "admin#aceptar_peticion",  :as => 'aceptar_peticion'
-  get "admin/rechazar_peticion/:id"=> "admin#rechazar_peticion", :as => 'rechazar_peticion'  
+  get "admin/aceptar_peticion/:id"  => "admin#aceptar_peticion",  :as => 'aceptar_peticion'
+  get "admin/rechazar_peticion/:id" => "admin#rechazar_peticion", :as => 'rechazar_peticion'  
+  get "admin/cambiar_etapa/:id"     => "admin#cambiar_etapa",     :as => 'cambiar_etapa'
 
 #AUTHENTIFICATION
   get "auth/login"

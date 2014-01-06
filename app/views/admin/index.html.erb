@@ -1,2 +1,25 @@
-<h1>Admin#index</h1>
+<h1> Bienvenido Administrador </h1>
+
+<% if @etapa != nil %>
+	<% if @etapa.activa == 0 %>
+		<h2> Proceso Finalizado </h2> <%= link_to "Comenzar Proceso", cambiar_etapa_path(1) %>
+	<% end %>
+	<% if @etapa.activa == 1 %>
+		<h2> Etapa Actual: Creación de Ramos </h2><%= link_to "Avanzar a siguiente etapa", cambiar_etapa_path(2) %>
+	<% end %>
+	<% if @etapa.activa == 2 %>
+		<h2> Etapa Actual: Modificación Cursos </h2><%= link_to "Avanzar a siguiente etapa", cambiar_etapa_path(3) %>
+	<% end %>
+	<% if @etapa.activa == 3 %>
+		<h2> Etapa Actual: Creacion Cursos </h2><%= link_to "Avanzar a siguiente etapa", cambiar_etapa_path(4) %>
+	<% end %>
+	<% if @etapa.activa == 4 %>
+		<h2> Etapa Actual: Postulaciones </h2><%= link_to "Avanzar a siguiente etapa", cambiar_etapa_path(5) %>
+	<% end %>
+	<% if @etapa.activa == 5 %>
+		<h2>Etapa Actual: Entrega de Resultados</h2><%= link_to "Finalizar Proceso", cambiar_etapa_path(0) %>
+	<% end %>
+<% else %>
+	<%= link_to "Comenzar Proceso" , cambiar_etapa_path(1)%>
+<% end %>
 <p>Find me in app/views/admin/index.html.erb</p>

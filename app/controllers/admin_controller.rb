@@ -3,7 +3,7 @@ class AdminController < ApplicationController
 	before_filter :checkAdmin
 	
   def index
-    @flag = "NADA"
+    @etapa = Etapa.first
   end
 
   def profe_new
@@ -86,6 +86,13 @@ class AdminController < ApplicationController
   def rechazar_peticion
     peticion = Editar_ramo.find_by_id(params[:id])
     peticion.destroy
+    redirect_to :action => "peticiones"
+  end
+
+  def cambiar_etapa
+    etapa = Etapa.first
+    etapa.update_attributes(:activo => params[:id])
+    redirect_to :action => "index"
   end
 
 
