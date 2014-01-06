@@ -2,7 +2,7 @@
 
 <%= f.hidden_field :id_ramo, :value => @ramos.id %>
 <%= f.hidden_field :id_alumno, :value => session[:id_usuario] %>
-<%= f.hidden_field :status, :value = "En Espera" %>
+<%= f.hidden_field :status, :value => "En Espera" %>
 
 <p>Tipo:
 catedra <%= f.check_box :cat %>
