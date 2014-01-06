@@ -52,10 +52,10 @@
   <div class="collapse navbar-collapse navbar-ex1-collapse">
     <ul class="nav navbar-nav">      
       <li class="dropdown">
-        <li><a href="verRamo.html">Ver Ramos</a></li>
-        <li><a href="ramo_new.html">Agregar Ramo</a></li>
-        <li><a href="ver_peticion.html">Ver Peticiones</a></li>
-        <li><a href="profe_new.html">Agregar Profesor</a></li>
+        <%= link_to "Ver Ramos", :action => "verRamo" %>
+        <%= link_to "Agregar Ramo", :action => "ramo_new" %>
+        <%= link_to "Ver Peticiones", :action => "ver_peticion" %>
+        <%= link_to "Agregar Profesor", :action => "profe_new" %>
       </li>
     </ul>
 
