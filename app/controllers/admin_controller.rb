@@ -92,9 +92,9 @@ class AdminController < ApplicationController
   def cambiar_etapa
     etapa = Etapa.first
     if etapa
-      etapa.update_attributes(:activo => params[:id])
+      etapa.update_attributes(:activa => params[:id])
     else
-      Etapa.new(params[:id])
+      Etapa.create(:activa => params[:id])
     end
     redirect_to :action => "index"
   end
