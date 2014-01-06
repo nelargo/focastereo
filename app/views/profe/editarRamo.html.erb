@@ -12,9 +12,9 @@
 		<%= f.number_field :num_ayudantes, :value => @ramo.num_ayudantes %>
 		<br>
 		<label>tipo de ayundates</label>
-		catedra <%= f.check_box :tipo_ayudante_cat %>
-		laboratorio <%= f.check_box :tipo_ayudante_lab %>
-		correccion <%= f.check_box :tipo_ayudante_cor %>
+		catedra <%= f.check_box :tipo_ayudante_cat, :value => @ramo.tipo_ayudante_cat %>
+		laboratorio <%= f.check_box :tipo_ayudante_lab, :value => @ramo.tipo_ayudante_lab %>
+		correccion <%= f.check_box :tipo_ayudante_cor, :value => @ramo.tipo_ayudante_cor %>
 		<br>
 		
 		<br>
