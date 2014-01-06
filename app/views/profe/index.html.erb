@@ -1,7 +1,7 @@
 <h2>Noticias</h2>
 <table class="table table-striped">
 	<thead><tr><th>Estado Actual del Proceso</th> </tr> </thead>
-	<tbody><tr><% if @etapa != nil %>
+	<tbody><tr><td><% if @etapa != nil %>
 	<% if @etapa.activa == 0 %>
 		Proceso Finalizado
 	<% end %>
@@ -21,7 +21,7 @@
 		Entrega de Resultados
 	<% end %>
 	<% end %>
- <td> </td> </tr>  </tbody></table>
+ </td> </tr>  </tbody></table>
 
 <table class="table table-bordered">
 			<h3><span class="label label-info">Datos personales</span></h3>

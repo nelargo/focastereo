@@ -1,8 +1,9 @@
 
 
 <h2> "Bienvenido Administrador" </h2>
-
-<% if @etapa != nil %>
+<table class="table table-striped">
+	<thead><tr><th>Estado Actual del Proceso</th> </tr> </thead>
+	<tbody><tr><td><% if @etapa != nil %>
 	<% if @etapa.activa == 0 %>
 		<h2> Proceso Finalizado </h2> <%= link_to "Comenzar Proceso", cambiar_etapa_path(1) %>
 	<% end %>
@@ -24,4 +25,5 @@
 <% else %>
 	<%= link_to "Comenzar Proceso" , cambiar_etapa_path(1)%>
 <% end %>
+</td> </tr>  </tbody></table>
 
