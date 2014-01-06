@@ -35,8 +35,8 @@
 	  				<td><%= postula.status %></td>	  				
 	  				<td>
 	  					<% if @etapa.activa != 6 %><!-- aqui tiene que estar en la etapa correcta -->
-	  						<%= link_to "Aceptar", aceptar_path(postula.id,params[:id]), :confirm => '¿Está seguro?' %>
-								<%= link_to "Rechazar", rechazar_path(postula.id,params[:id]), :confirm => '¿Está seguro?'%>
+	  						<%= link_to "Aceptar", aceptar_path(postula.id,params[:id]), :confirm => '¿Está seguro?', :class => "btn-succes" %>
+								<%= link_to "Rechazar", rechazar_path(postula.id,params[:id]), :confirm => '¿Está seguro?', :class => "btn-succes"%>
 	  					<% else %>
 	  						No hay acciones disponibles
 	  					<% end %>
