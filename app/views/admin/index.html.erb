@@ -1,3 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="http://getbootstrap.com/docs-assets/ico/favicon.png">
+
+    <title>PichangaChanga</title>
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/justified-nav.css" rel="stylesheet">
+	<style type="text/css" id="holderjs-style"></style>
+</head>
+<body>	
+<!-- MENU FIJADO EN TOP -->
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <!-- El logotipo y el icono que despliega el menú se agrupan
+       para mostrarlos mejor en los dispositivos móviles -->
+
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse"
+            data-target=".navbar-ex1-collapse">
+      <span class="sr-only">Desplegar navegación</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="">Administrador</a>
+  </div>
+
+<!-- Agrupar los enlaces de navegación, los formularios y cualquier
+       otro elemento que se pueda ocultar al minimizar la barra -->
+  <div class="collapse navbar-collapse navbar-ex1-collapse">
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="Inicio.php">INICIO</a></li>
+      
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+          Ramos <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+          <li><a href="ConfPartido.php">Ver Ramos</a></li>
+          <li><a href="BuscarPartido.php">Agregar Ramo</a></li>          
+        </ul>
+      </li>
+
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+          Peticiones <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+          <li><a href="ConfPartido.php">Ver Peticiones</a></li>      
+        </ul>
+      </li>
+
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+           Profesor <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+          <li><a href="ConfPartido.php">Agregar Profesor</a></li>        
+        </ul>
+        </li>
+    </ul>
+    </div>
+
+
 <h1> Bienvenido Administrador </h1>
 
 <% if @etapa != nil %>
@@ -23,3 +94,12 @@
 	<%= link_to "Comenzar Proceso" , cambiar_etapa_path(1)%>
 <% end %>
 <p>Find me in app/views/admin/index.html.erb</p>
+
+</nav>
+<script src="assets/javascripts/jquery-2.0.3.js"></script>
+<script src="assets/javascripts/bootstrap.js"></script>
+<script src="assets/javascripts/holder.js"></script>  
+<script src="assets/javascripts/tabs_old.js"></script>   
+
+
+</body></html>
