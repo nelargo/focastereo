@@ -25,13 +25,13 @@
 					<td><%= ramo.num_ayudantes%></td>
 
 					<td><% dummy = "|"%>
-	      			<%if r.tipo_ayudante_cat %>
+	      			<%if ramo.tipo_ayudante_cat %>
 	      				<% dummy = dummy + "cat|"%>
 	      			<% end %>
-	      			<%if r.tipo_ayudante_lab %>
+	      			<%if ramo.tipo_ayudante_lab %>
 	      				<% dummy = dummy + "lab|"%>
 	      			<% end %>
-	      			<%if r.tipo_ayudante_cor %>
+	      			<%if ramo.tipo_ayudante_cor %>
 	      				<% dummy = dummy + "cor|"%>
 	      			<% end %>
 	      			<%= dummy %>
