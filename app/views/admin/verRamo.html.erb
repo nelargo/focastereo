@@ -53,7 +53,7 @@
 					</td>
 					<td>
 						<%= link_to "Editar", editar_ramo_admin_path(ramo.id), :class => "btn-success"%>
-						<button type="button">Eliminar!</button>
+						<%= link_to "Eliminar", eliminar_ramo_admin_path(ramo.id), :class => "btn-success"%>
 					</td>
 				</tr>
 			<% end %>

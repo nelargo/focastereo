@@ -30,6 +30,12 @@ class AdminController < ApplicationController
     @profesores = Profesor.pluck(:nombre)
   end
 
+  def eliminarRamo
+    ramo = Ramo.find(params[:id])
+    ramo.destroy
+    redirect_to :action => "verRamo"
+  end
+
   def editar
     curso = Ramo.find(params[:ramo][:id])
     curso.update_attributes(ramo_params)
