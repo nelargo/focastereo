@@ -22,7 +22,7 @@ class AdminController < ApplicationController
   end
 
   def editarRamo
-    @ramos = Ramo.find_by_id(params[:id])
+    @ramo = Ramo.find_by_id(params[:id])
     @profesores = Profesor.pluck(:nombre)
   end
 
