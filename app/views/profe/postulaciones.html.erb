@@ -21,12 +21,22 @@
 	            	<td><%= alumno.prioridad %></td>
 	            	<td><%= alumno.categoria %></td>
 	            	<td><%= postula.prioridad %></td>
-	  				<td><%= postula.tipo_postulacion %></td>
+	  				<td><% dummy = "|"%>
+	      			<%if postula.cat %>
+	      				<% dummy = dummy + "catedra|"%>
+	      			<% end %>
+	      			<%if postula.lab %>
+	      				<% dummy = dummy + "laboratorio|"%>
+	      			<% end %>
+	      			<%if postula.cor %>
+	      				<% dummy = dummy + "corrección|"%>
+	      			<% end %>
+	      			<%= dummy %></td>
 	  				<td><%= postula.status %></td>	  				
 	  				<td>
-	  					<% if @etapa.activa == 4 %><!-- aqui tiene que estar en la etapa correcta -->
-	  						<%= link_to image_tag("aceptar.png"), aceptar_path(postula.id,params[:id]), :confirm => '¿Está seguro?' %>
-								<%= link_to image_tag("rechazar.png"), rechazar_path(postula.id,params[:id]), :confirm => '¿Está seguro?'%>
+	  					<% if @etapa.activa != 6 %><!-- aqui tiene que estar en la etapa correcta -->
+	  						<%= link_to "Aceptar", aceptar_path(postula.id,params[:id]), :confirm => '¿Está seguro?' %>
+								<%= link_to "Rechazar", rechazar_path(postula.id,params[:id]), :confirm => '¿Está seguro?'%>
 	  					<% else %>
 	  						No hay acciones disponibles
 	  					<% end %>
