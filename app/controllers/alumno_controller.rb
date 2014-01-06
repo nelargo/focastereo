@@ -31,6 +31,9 @@ class AlumnoController < ApplicationController
   end
 
   def eliminar_postulacion
+    post = Postular.find(params[:id])
+    post.destroy
+    redirect_to :action => "index"
   end
 
 private
