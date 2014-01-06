@@ -21,7 +21,7 @@
 
 </head>
 <body>
-<%= yield %>
+
 
 
 <%if session[:type] == "alumno" %>
@@ -86,6 +86,8 @@
     </nav>
 
 <% end %>
+<%= yield %>
+
 
 <%= javascript_include_tag "jquery-2.0.3.js" %>
 <%= javascript_include_tag "bootstrap.js" %>
