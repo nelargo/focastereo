@@ -1,7 +1,6 @@
 <table>
 <tr><td>Sigla - Nombre</td><td>Profesor</td><td></td>
 <% @p.each do |pet| %>
-
 <% ramo = Ramo.find_by_id(pet.id_ramo) %>
 <tr><td><%= ramo.sigla %> - <%= ramo.nombre %></td>
 		<td><%= ramo.profesor %></td>

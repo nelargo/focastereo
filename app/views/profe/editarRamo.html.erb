@@ -3,7 +3,7 @@
 	<%= form_for(:editar_ramo, :url => "/profe/editarRamo") do |f| %>
 
 		<label>sigla</label>
-		<%= f.hidden_field :id, :value => @ramo.id %>
+		<%= f.hidden_field :id_ramo, :value => @ramo.id %>
 		<%= f.text_field :sigla, :value => @ramo.sigla %>
 		<br>
 		<label>nombre</label>
