@@ -17,7 +17,7 @@ class AlumnoController < ApplicationController
   end
 
   def postular
-  	@ramos = Ramo.all
+  	@ramos = Ramo.where(:id.eq => params[:id], :activa.eq => 1)    
   end
 
   def crear  	

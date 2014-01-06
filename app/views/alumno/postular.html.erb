@@ -8,9 +8,19 @@
 	<% @ramos.each do |r| %>
 		<tr><td><%= r.sigla %></td>
 				<td><%= r.nombre %></td>
-
-      				<td></td>
-				<td></td>
+      	<td><% dummy = "|"%>
+      			<%if r.tipo_ayudante_cat %>
+      				<% dummy = dummy + "cat|"%>
+      			<% end %>
+      			<%if r.tipo_ayudante_lab %>
+      				<% dummy = dummy + "lab|"%>
+      			<% end %>
+      			<%if r.tipo_ayudante_cor %>
+      				<% dummy = dummy + "cor|"%>
+      			<% end %>
+      			<%= dummy %>
+      	</td>
+				<td><% link_to "Postular", postular</td>
 		<tr>
 	<% end %>
 </table>
