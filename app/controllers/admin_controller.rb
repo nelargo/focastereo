@@ -95,6 +95,7 @@ class AdminController < ApplicationController
       etapa.update_attributes(:activo => params[:id])
     else
       etapa.create(:activo => params[:id])
+    end
     redirect_to :action => "index"
   end
 
