@@ -30,7 +30,7 @@ class ProfeController < ApplicationController
   def procesarEditarRamo
     profe = Profesor.find_by_rol(session[:id_usuario])
     ramo = Ramo.find(params[:editar_ramo][:id])
-    if ramo.profesor != profesor.nombre
+    if ramo.profesor != profe.nombre
       redirect_to root_path
       return
     end
