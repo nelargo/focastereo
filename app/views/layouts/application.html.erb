@@ -25,6 +25,45 @@
 <body>
 
 <% if session[:type] == "alumno" %>
+
+<!-- MENU FIJADO EN TOP -->
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <!-- El logotipo y el icono que despliega el menú se agrupan
+       para mostrarlos mejor en los dispositivos móviles -->
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse"
+            data-target=".navbar-ex1-collapse">
+      <span class="
+      r-only">Desplegar navegación</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="index">Alumno</a>
+  </div>
+
+<!-- Agrupar los enlaces de navegación, los formularios y cualquier
+       otro elemento que se pueda ocultar al minimizar la barra -->
+  <div class="collapse navbar-collapse navbar-ex1-collapse">
+    <ul class="nav navbar-nav">      
+        <li> <%= link_to "Postular", :controller => "alumno", :action => "postular" %> </li>
+    </ul>
+
+    <ul class="nav navbar-nav navbar-right">
+      <li><%= link_to "Cerrar Sesión", logout_path%>
+      </li>
+    </ul>
+    </div>
+    
+</nav>
+
+
+
+
+
+
+
+
 <% end %>
 
 <% if session[:type] == "profesor" %>
@@ -42,7 +81,7 @@
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-    <a class="navbar-brand" href="">Profesor</a>
+    <a class="navbar-brand" href="index">Profesor</a>
   </div>
 
 <!-- Agrupar los enlaces de navegación, los formularios y cualquier
@@ -87,7 +126,7 @@
         <li> <%= link_to "Ver Ramos", :controller => "admin", :action => "verRamo" %> </li>
         <li> <%= link_to "Agregar Ramo", :controller => "admin", :action => "ramo_new" %> </li>
         <li> <%= link_to "Ver Peticiones", :controller => "admin", :action => "peticiones" %> </li>
-        <li>   <%= link_to "Agregar Profesor", :controller => "admin", :action => "profe_new" %> </li>
+        <li>  <%= link_to "Agregar Profesor", :controller => "admin", :action => "profe_new" %> </li>
     </ul>
 
     <ul class="nav navbar-nav navbar-right">
